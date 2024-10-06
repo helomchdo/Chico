@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00ff99;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    text-align: center;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    color: #00ff99;
+}
+
+#hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Chico Animado */
+#chico-robot {
+    margin-top: 30px;
+    width: 736px;
+    height: 552px;
+    background-image: url('chico.png');
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+#chico-robot:active {
+    transform: scale(1.5) rotate(-10deg);
+}
+
+/* Seções */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #00ff99;
+    margin-bottom: 20px;
+}
+
+/* Interação - Passos */
+.interaction-steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.step {
+    width: 30%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.step h3 {
+    color: #00ff99;
+}
+
+.step:hover {
+    background-color: #444;
+}
+
+/* Patrocinadores */
+#sponsors {
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+.sponsors-logos {
+    display: flex;
+    justify-content: center;
+}
+
+.sponsors-logos img {
+    margin: 0 15px;
+    width: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+}
