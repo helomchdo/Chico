@@ -117,6 +117,97 @@ section h2 {
     background-color: #444;
 }
 
+/* Container do Carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+  
+/* Track que contém todos os cards */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content; /* Permite que os cards ocupem todo o espaço necessário */
+}
+  
+/* Estilo dos cards */
+.team-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 220px;
+    margin-right: 10px; /* Espaçamento entre os cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+/* Foto do participante */
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+  
+/* Botões de navegação (setas) */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Botão do LinkedIn */
+.linkedin-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #0f0f0f;
+    ;
+    width: 100px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    margin-top: 10px;
+    margin-left: auto;  /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    text-decoration: none;
+    border: none; /* Remove borda padrão */
+    padding: 0; /* Remove padding */
+}
+
+.linkedin-btn img {
+    width: 60px; /* Tamanho da logo do LinkedIn */
+    height: 60px;
+}
+
+.linkedin-btn:hover {
+    background-color: #0c0c0c;
+}
+
+
+
+  
 /* Patrocinadores */
 #sponsors {
     padding: 20px;
