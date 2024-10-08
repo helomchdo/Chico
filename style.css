@@ -140,3 +140,54 @@ footer {
     padding: 20px;
     color: #ccc;
 }
+button {
+    background-color: #01d37f; /* Mesma cor que o h3 .step */
+    color: #0b0505; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor como uma mãozinha */
+    transition: background-color 0.3s ease; /* Animação suave para hover */
+}
+
+button:hover {
+    background-color: #00ff99; /* Cor um pouco mais escura para o hover */
+}
+
+
+#video {
+    text-align: center; /* Centraliza o conteúdo da seção */
+    margin: 50px 0; /* Adiciona espaço acima e abaixo da seção */
+}
+
+#video iframe {
+    border: 5px solid #00ff99; /* Moldura verde ao redor do vídeo */
+    border-radius: 15px; /* Deixa os cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor do vídeo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+#video iframe:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+#unmute-btn {
+    position: fixed; /* Botão fixo */
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância do lado direito */
+    padding: 10px 20px;
+    background-color: #01d37f;
+    color: #0b0505;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Garantir que o botão fique acima de outros elementos */
+}
+
+#unmute-btn:hover {
+    background-color: #00ff99;
+}

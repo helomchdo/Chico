@@ -7,44 +7,75 @@
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="/manifest.json">
 </head>
-<body>
-    <!-- Header com logo -->
-    <header>
-        <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#interact">Como Interagir</a></li>
-                <li><a href="#about">Sobre o Projeto</a></li>
-                <li><a href="#team">Equipe</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
+    <nav>
+        <ul>
+            <li><a href="#interact" class="nav-link">Como Interagir</a></li>
+            <li><a href="#about" class="nav-link">Sobre o Projeto</a></li>
+            <li><a href="#team" class="nav-link">Equipe</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Seção Hero com animação do Chico -->
-    <section id="hero">
-        <h1>Titulo</h1>
-        <p>Conheça Chico, o caranguejo robótico interativo!</p>
-        <div id="chico-robot"></div> <!-- Chico interativo aparecerá aqui -->
-    </section>
+<!-- Seção Hero com animação do Chico -->
+<section id="hero">
+    <h1>Titulo</h1>
+    <p>Conheça Chico, o caranguejo robótico interativo!</p>
+    <div id="chico-robot"></div> <!-- Chico interativo aparecerá aqui -->
+</section>
 
-    <!-- Seção Como Interagir -->
-    <section id="interact">
-        <h2>Como Interagir com o Chico</h2>
-        <div class="interaction-steps">
-            <div class="step">
-                <h3>Passo 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="step">
-                <h3>Passo 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="step">
-                <h3>Passo 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+<section id="video">
+    <h2>Assista ao vídeo do Projeto Chico</h2>
+
+    <!-- Incorporando o vídeo do YouTube com autoplay, loop e mudo -->
+    <iframe id="chico-video" width="560" height="315" 
+        src="https://www.youtube.com/embed/jdHQOXlituI?autoplay=1&loop=1&mute=1&playlist=jdHQOXlituI" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+    <!-- Botão para ativar o som -->
+    <button id="unmute-btn">Ativar Som</button>
+</section>
+
+
+
+
+
+<!-- Seção Como Interagir -->
+<section id="interact">
+    <h2>Como Interagir com o Chico</h2>
+    <div class="interaction-steps">
+        <div class="step">
+            <h3>Passo 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </section>
+        <div class="step">
+            <h3>Passo 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="step">
+            <h3>Passo 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Sobre o Projeto -->
+<section id="about">
+    <h2>Sobre o Projeto</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat urna eget libero convallis.</p>
+    <a href="https://www.youtube.com/watch?v=_UY0Fg7z5Qk" target="_blank">
+        <button>Saiba Mais</button>
+    </a>
+</section>
+
+<!-- Seção Equipe -->
+<section id="team">
+    <h2>Equipe</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat urna eget libero convallis.</p>
+</section>
 
     <!-- Seção Sobre o Projeto -->
     <section id="about">
@@ -71,8 +102,10 @@
     <footer>
         <p>© 2024 Projeto Chico - Todos os direitos reservados.</p>
     </footer>
-
+    <script src="som.js"></script>
+    <script src="scroll.js"></script>
     <!-- Script para interação -->
     <script src="script.js"></script>
+    
 </body>
 </html>
