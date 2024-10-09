@@ -71,12 +71,13 @@ nav ul li a:hover {
 /* Chico Animado */
 #chico-robot {
     margin-top: 30px;
-    width: 736px;
-    height: 552px;
-    background-image: url('chico.png');
-    background-size: cover;
+    width: 100%;
+    max-width: 736px; /* Limite máximo se necessário */
+    height: auto;
+    margin: 20px 0; /* Adicionando margem para separação */
+   
     transition: transform 0.5s ease;
-}
+}*/
 
 #chico-robot:active {
     transform: scale(1.5) rotate(-10deg);
@@ -126,14 +127,14 @@ section h2 {
     display: flex;
     align-items: center;
 }
-  
+
 /* Track que contém todos os cards */
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: max-content; /* Permite que os cards ocupem todo o espaço necessário */
 }
-  
+
 /* Estilo dos cards */
 .team-card {
     background-color: #333;
@@ -144,7 +145,7 @@ section h2 {
     margin-right: 10px; /* Espaçamento entre os cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-  
+
 /* Foto do participante */
 .team-photo {
     width: 100px;
@@ -152,7 +153,7 @@ section h2 {
     border-radius: 50%;
     margin-bottom: 10px;
 }
-  
+
 /* Botões de navegação (setas) */
 .prev-btn, .next-btn {
     position: absolute;
@@ -184,20 +185,19 @@ section h2 {
     justify-content: center;
     align-items: center;
     background-color:  #0f0f0f;
-    ;
-    width: 100px; /* Largura do botão */
-    height: 40px; /* Altura do botão */
-    border-radius: 5px; /* Bordas levemente arredondadas */
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
     margin-top: 10px;
-    margin-left: auto;  /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
-    border: none; /* Remove borda padrão */
-    padding: 0; /* Remove padding */
+    border: none;
+    padding: 0;
 }
 
 .linkedin-btn img {
-    width: 60px; /* Tamanho da logo do LinkedIn */
+    width: 60px;
     height: 60px;
 }
 
@@ -205,9 +205,6 @@ section h2 {
     background-color: #0c0c0c;
 }
 
-
-
-  
 /* Patrocinadores */
 #sponsors {
     padding: 20px;
@@ -231,43 +228,43 @@ footer {
     padding: 20px;
     color: #ccc;
 }
+
 button {
-    background-color: #01d37f; /* Mesma cor que o h3 .step */
-    color: #0b0505; /* Cor do texto */
-    border: none; /* Remove a borda */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Mostra o cursor como uma mãozinha */
-    transition: background-color 0.3s ease; /* Animação suave para hover */
+    background-color: #01d37f;
+    color: #0b0505;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #00ff99; /* Cor um pouco mais escura para o hover */
+    background-color: #00ff99;
 }
 
-
 #video {
-    text-align: center; /* Centraliza o conteúdo da seção */
-    margin: 50px 0; /* Adiciona espaço acima e abaixo da seção */
+    text-align: center;
+    margin: 50px 0;
 }
 
 #video iframe {
-    border: 5px solid #00ff99; /* Moldura verde ao redor do vídeo */
-    border-radius: 15px; /* Deixa os cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor do vídeo */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave ao passar o mouse */
+    border: 5px solid #00ff99;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #video iframe:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 #unmute-btn {
-    position: fixed; /* Botão fixo */
-    bottom: 20px; /* Distância do fundo da página */
-    right: 20px; /* Distância do lado direito */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     padding: 10px 20px;
     background-color: #01d37f;
     color: #0b0505;
@@ -276,9 +273,181 @@ button:hover {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    z-index: 1000; /* Garantir que o botão fique acima de outros elementos */
+    z-index: 1000;
 }
 
 #unmute-btn:hover {
     background-color: #00ff99;
 }
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .interaction-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .team-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustar a imagem e o vídeo para garantir a responsividade */
+    #chico-robot,
+    #video {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Evita que a largura exceda o contêiner */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .step {
+        width: 90%;
+    }
+
+    /* Melhorias adicionais */
+    #hero p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .step h3 {
+        font-size: 1.5rem;
+    }
+
+    .linkedin-btn {
+        width: 80px;
+        height: 35px;
+    }
+
+    .team-card {
+        padding: 10px;
+    }
+
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .team-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Ajustar a imagem e o vídeo para garantir a responsividade */
+    #chico-robot,
+    #video {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Evita que a largura exceda o contêiner */
+    }
+}
+
+@media (max-width: 360px) {
+    /* Ajustar o tamanho do logo no header */
+    .logo {
+        height: 40px;
+    }
+
+    /* Diminuir o padding no header */
+    header {
+        padding: 10px;
+    }
+
+    /* Reduzir o tamanho do texto no hero */
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar a imagem e o vídeo para garantir a responsividade */
+    #chico-robot,
+    #video {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Evita que a largura exceda o contêiner */
+    }
+
+    /* Ajustar tamanho dos passos */
+    .step {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .step h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Ajustar o tamanho das fotos no carrossel */
+    .team-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Ajustar botões do carrossel */
+    .prev-btn, .next-btn {
+        padding: 8px;
+    }
+
+    /* Ajustar botão do LinkedIn */
+    .linkedin-btn {
+        width: 70px;
+        height: 30px;
+    }
+
+    /* Footer - reduzir padding */
+    footer {
+        padding: 10px;
+    }
+
+    /* Botão unmute */
+    #unmute-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
