@@ -23,21 +23,24 @@
 <section id="hero">
   <h1>Titulo</h1>
   <p>Conheça Chico, o caranguejo robótico interativo!</p>
-  <div id="chico-robot">
-      <img src="chico.png" alt="Imagem do Chico, o caranguejo robótico" class="chico-image">
+  <div id="chico-robot" class="chico-robot">
+    <img src="chico.png" alt="Imagem do Chico, o caranguejo robótico" class="chico-image">
   </div>
 </section>
+
 
 
 <section id="video">
     <h2>Assista ao vídeo do Projeto Chico</h2>
 
     <!-- Incorporando o vídeo do YouTube com autoplay, loop e mudo -->
-    <iframe id="chico-video" width="560" height="315" 
-        src="https://www.youtube.com/embed/jdHQOXlituI?autoplay=1&loop=1&mute=1&playlist=jdHQOXlituI" 
-        title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+    <div class="video-container">
+      <iframe id="chico-video" 
+          src="https://www.youtube.com/embed/jdHQOXlituI?autoplay=1&loop=1&mute=1&playlist=jdHQOXlituI" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+  </div>
 
     <!-- Botão para ativar o som -->
     <button id="unmute-btn">Ativar Som</button>
@@ -97,10 +100,10 @@
     <div class="carousel-track">
       <!-- Card de Participantes -->
       <div class="team-card">
-        <img src="team1.png" alt="Participante 1" class="team-photo">
-        <h3>Nome do Participante </h3>
-        <p>Função</p>
-        <a href="https://www.linkedin.com/in/participante1" target="_blank" class="linkedin-btn">
+        <img src="logo-chico.png" alt="Participante 1" class="team-photo">
+        <h3>Carlos Castilhos </h3>
+        <p>Garoto Do Programa</p>
+        <a href="https://www.linkedin.com/in/carlos-castilhos-18b350252/" target="_blank" class="linkedin-btn">
             <img src="linkedin-logo.png" alt="LinkedIn">
         </a>
       </div>
@@ -188,8 +191,8 @@
     <section id="sponsors">
         <h3>Patrocinadores</h3>
         <div class="sponsors-logos">
-            <img src="senac-logo.png" alt="Senac">
-            <img src="sebrae-logo.png" alt="Sebrae">
+            <img src="logo-chico.png" alt="Senac">
+            <img src="logo-chico.png" alt="Sebrae">
         </div>
     </section>
 
@@ -197,6 +200,9 @@
     <footer>
         <p>© 2024 Projeto Chico - Todos os direitos reservados.</p>
     </footer>
+
+
+    <script src="chicoexpansion.js"></script>
     <script src="som.js"></script>
     <script src="scroll.js"></script>
     <!-- Script para interação -->

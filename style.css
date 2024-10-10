@@ -11,7 +11,14 @@ body {
     color: #fff;
     font-size: 16px;
     line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
 }
+
+.container {
+    overflow-x: hidden; /* Impede a rolagem horizontal neste contêiner */
+}
+
 
 /* Header */
 header {
@@ -46,8 +53,9 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
+/* Estilização da Seção Hero */
 #hero {
-    height: 100vh;
+    height: 100vh; /* Ocupa 100% da altura da viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,33 +63,42 @@ nav ul li a:hover {
     background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
     text-align: center;
     padding: 20px;
+    overflow-x: hidden; /* Remove qualquer scroll horizontal */
 }
 
 #hero h1 {
     font-size: 3rem;
     color: #00ff99;
+    margin: 0; /* Remove margens extras */
 }
 
 #hero p {
     margin-top: 10px;
     font-size: 1.2rem;
     color: #ccc;
+    max-width: 90%; /* Limita o texto a 90% da largura da tela para melhor legibilidade */
 }
 
-/* Chico Animado */
-#chico-robot {
+/* Estilização do Contêiner de Imagem do Chico */
+.chico-robot {
     margin-top: 30px;
     width: 100%;
-    max-width: 736px; /* Limite máximo se necessário */
+    max-width: 736px; /* Limita a largura máxima */
     height: auto;
-    margin: 20px 0; /* Adicionando margem para separação */
-   
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
     transition: transform 0.5s ease;
-}*/
-
-#chico-robot:active {
-    transform: scale(1.5) rotate(-10deg);
 }
+
+.chico-image {
+    max-width: 100%; /* Garante que a imagem seja 100% responsiva */
+    height: auto; /* Mantém a proporção correta */
+}
+
+#chico-robot:active .chico-image {
+    transform: scale(1.5) rotate(-10deg); /* Expansão ao clicar na imagem */
+}
+
 
 /* Seções */
 section {
@@ -132,7 +149,7 @@ section h2 {
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: max-content; /* Permite que os cards ocupem todo o espaço necessário */
+    width: 100%; /* Permite que os cards ocupem todo o espaço necessário */
 }
 
 /* Estilo dos cards */
@@ -262,18 +279,15 @@ button:hover {
 }
 
 #unmute-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+    display: block; /* Garante que o botão ocupe a linha inteira */
+    margin: 10px auto; /* Centraliza o botão horizontalmente */
     padding: 10px 20px;
+    font-size: 16px;
     background-color: #01d37f;
     color: #0b0505;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    z-index: 1000;
 }
 
 #unmute-btn:hover {
@@ -327,6 +341,17 @@ button:hover {
         height: auto;
         max-width: 100%; /* Evita que a largura exceda o contêiner */
     }
+    #chico-video {
+        width: 100%; /* Garante que o iframe ocupe 100% da largura do contêiner */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    #unmute-btn {
+        width: 100%; /* O botão ocupará 100% da largura disponível */
+        padding: 10px; /* Ajusta o espaçamento interno */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -380,6 +405,12 @@ button:hover {
         width: 100%;
         height: auto;
         max-width: 100%; /* Evita que a largura exceda o contêiner */
+    }
+
+    #unmute-btn {
+        width: 100%; /* O botão continua ocupando 100% da largura */
+        padding: 8px; /* Reduz um pouco o espaçamento interno */
+        font-size: 14px; /* Mantém o tamanho da fonte reduzido */
     }
 }
 
@@ -447,6 +478,12 @@ button:hover {
     #unmute-btn {
         padding: 8px 15px;
         font-size: 14px;
+    }
+
+    #unmute-btn {
+        width: 100%; /* O botão ocupa a largura completa */
+        padding: 8px 15px; /* Ajusta o espaçamento interno */
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
     }
 }
 
