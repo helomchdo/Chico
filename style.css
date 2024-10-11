@@ -6,6 +6,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #0f0f0f;
     color: #fff;
@@ -13,6 +17,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -88,11 +94,13 @@ nav ul li a:hover {
     display: flex;
     justify-content: center; /* Centraliza a imagem */
     transition: transform 0.5s ease;
+    overflow: hidden;
 }
 
 .chico-image {
     max-width: 100%; /* Garante que a imagem seja 100% responsiva */
     height: auto; /* Mantém a proporção correta */
+    transition: transform 0.5s ease;
 }
 
 #chico-robot:active .chico-image {
@@ -135,7 +143,6 @@ section h2 {
     background-color: #444;
 }
 
-/* Container do Carrossel */
 .carousel-container {
     position: relative;
     max-width: 100%;
@@ -148,8 +155,7 @@ section h2 {
 /* Track que contém todos os cards */
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%; /* Permite que os cards ocupem todo o espaço necessário */
+    transition: transform 0.5s ease;
 }
 
 /* Estilo dos cards */
@@ -158,9 +164,15 @@ section h2 {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 220px;
-    margin-right: 10px; /* Espaçamento entre os cards */
+    width: 220px; /* Largura padrão dos cards */
+    margin-right: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Começa invisível */
+    transition: opacity 0.5s ease;
+}
+
+.team-card.active {
+    opacity: 1; /* Card ativo é totalmente visível */
 }
 
 /* Foto do participante */
@@ -171,26 +183,29 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* Botões de navegação (setas) */
+/* Estilo dos botões */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #fff;
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10; /* Garante que os botões fiquem acima do carrossel */
 }
 
+/* Posicionamento dos botões */
 .prev-btn {
-    left: 10px;
+    left: 10px; /* Ajusta para não ficar sobre os cards */
 }
 
 .next-btn {
-    right: 10px;
+    right: 10px; /* Ajusta para não ficar sobre os cards */
 }
+
+
 
 .prev-btn:hover, .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -295,6 +310,18 @@ button:hover {
 }
 
 /* Responsividade para dispositivos móveis */
+@media (min-width: 1024px) {
+    .team-card {
+        min-width: 33.33%; /* Exibe 3 cards lado a lado em telas ainda maiores */
+    }
+}
+
+@media (min-width: 1200px) {
+    .team-card {
+        min-width: 25%; /* Exibe 4 cards lado a lado em telas grandes */
+    }
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -329,9 +356,12 @@ button:hover {
     }
 
     .team-card {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
+        width: 150px;
+    }
+
+    .team-photo {
+        width: 70px;
+        height: 70px;
     }
 
     /* Ajustar a imagem e o vídeo para garantir a responsividade */
@@ -386,17 +416,22 @@ button:hover {
         height: 35px;
     }
 
-    .team-card {
-        padding: 10px;
+    .carousel-container {
+        padding: 0 20px;
     }
 
-    .carousel-container {
-        padding: 0 10px;
+    .carousel-track {
+        display: flex;
+        justify-content: center; /* Centraliza o card visível */
+    }
+
+    .team-card {
+        min-width: 90%; /* Ajusta o tamanho do card em telas menores */
     }
 
     .team-photo {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     /* Ajustar a imagem e o vídeo para garantir a responsividade */
