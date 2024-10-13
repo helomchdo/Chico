@@ -5,7 +5,10 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
+@font-face {
+    font-family: 'DK Longreach';
+    src: url("DK\ Longreach.otf");
+}
 html {
     overflow-x: hidden;
 }
@@ -36,7 +39,7 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 100px;
 }
 
 nav ul {
@@ -55,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00ff99;
+    color: #F2561D;
 }
 
 /* Hero Section */
@@ -73,15 +76,19 @@ nav ul li a:hover {
 }
 
 #hero h1 {
+    font-family: 'Dk Longreach';
     font-size: 3rem;
-    color: #00ff99;
+    color: #F2561D;
+    letter-spacing: 2px;
     margin: 0; /* Remove margens extras */
 }
 
 #hero p {
+    font-family: 'Dk Longreach';
     margin-top: 10px;
     font-size: 1.2rem;
     color: #ccc;
+    letter-spacing: 2px;
     max-width: 90%; /* Limita o texto a 90% da largura da tela para melhor legibilidade */
 }
 
@@ -115,8 +122,10 @@ section {
 }
 
 section h2 {
-    font-size: 2.5rem;
-    color: #00ff99;
+    font-family: 'Dk Longreach';
+    font-size: 3rem;
+    color: #F2561D;
+    letter-spacing: 2px;
     margin-bottom: 20px;
 }
 
@@ -143,19 +152,13 @@ section h2 {
     background-color: #444;
 }
 
-.carousel-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
 /* Track que contém todos os cards */
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease;
+    overflow-x: auto; /* Ativa o scroll horizontal */
+    scroll-snap-type: x mandatory; /* Snap para cards inteiros */
+    gap: 10px; /* Espaçamento entre os cards */
+    padding-bottom: 10px; /* Adiciona espaçamento na parte inferior */
 }
 
 /* Estilo dos cards */
@@ -165,15 +168,20 @@ section h2 {
     padding: 20px;
     text-align: center;
     width: 220px; /* Largura padrão dos cards */
-    margin-right: 10px;
+    flex: 0 0 220px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-     /* Começa invisível */
-    transition: opacity 0.5s ease;
+    scroll-snap-align: start; /* Faz com que cada card se alinhe ao início ao scrollar */
 }
 
-.team-card.active {
-    opacity: 1; /* Card ativo é totalmente visível */
+/* Para responsividade */
+.carousel-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde os cards que estão fora do container */
 }
+
+
 
 /* Foto do participante */
 .team-photo {
@@ -183,33 +191,6 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* Estilo dos botões */
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10; /* Garante que os botões fiquem acima do carrossel */
-}
-
-/* Posicionamento dos botões */
-.prev-btn {
-    left: 10px; /* Ajusta para não ficar sobre os cards */
-}
-
-.next-btn {
-    right: 10px; /* Ajusta para não ficar sobre os cards */
-}
-
-
-
-.prev-btn:hover, .next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
 /* Botão do LinkedIn */
 .linkedin-btn {
