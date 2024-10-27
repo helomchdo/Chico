@@ -152,6 +152,63 @@ section h2 {
     background-color: #444;
 }
 
+.maker-container{
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0px auto;
+}
+
+.id{
+    font-family: 'Dk Longreach';
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ccc;
+    letter-spacing: 2px;
+    max-width: 90%;
+}
+
+.contenair-ideacao{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+}
+.container .row{
+    width: 855;
+    margin: auto;
+}
+
+.container .row .heading-section{
+    width: 60%;
+    text-align: center;
+}
+
+.container .row .heading-section p {
+    margin-top: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.content-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.content-section .card {
+    flex: 1;
+    margin: 40px 20px;
+}
+
+.content-section .card img {
+    width: 100%;
+    height: auto;
+}
+
 /* Track que contém todos os cards */
 .carousel-track {
     display: flex;
@@ -301,6 +358,8 @@ button:hover {
     .team-card {
         min-width: 25%; /* Exibe 4 cards lado a lado em telas grandes */
     }
+
+
 }
 
 @media (max-width: 768px) {
@@ -330,6 +389,15 @@ button:hover {
     .step {
         width: 80%;
         margin-bottom: 20px;
+    }
+
+    .maker-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .content-section {
+        flex-direction: column;
     }
 
     .carousel-container {

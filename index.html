@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Chico</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<header>
+    <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
+    <nav>
+        <ul>
+            <!-- <li><a href="#interact" class="nav-link">Como Interagir</a></li> -->
+            <li><a href="#about" class="nav-link">Sobre o Projeto</a></li>
+            <li><a href="#team" class="nav-link">Equipe</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Seção Hero com animação do Chico -->
+<!-- Seção Hero com imagem do Chico -->
+<section id="hero">
+  <h1>Conheça Chico,</h1>
+  <p> O caranguejo interativo!</p>
+  <div id="chico-robot" class="chico-robot">
+    <img src="chico.png" alt="Imagem do Chico, o caranguejo robótico" class="chico-image">
+  </div>
+</section>
+
+<!-- Seção Sobre o Projeto -->
+<section id="about">
+    <h2>Sobre o Projeto</h2>
+    <img src="sobre.png" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+    <p>O caranguejo CHICO é um símbolo de resiliência e cultura pernambucana, renascido a partir de lixo eletrônico para unir inovação e tradição. Em uma escultura de 2,4 m x 1,5 m, CHICO ganha vida através de Arduino, Raspberry Pi e sensores que captam toques, temperatura e distância, transformando a interação com o público em uma experiência gamificada e emocionante. Suas expressões em pixel art refletem emoções que se conectam de forma lúdica e significativa com os visitantes, promovendo, por meio do motor de jogos Godot, uma reflexão sobre a importância da sustentabilidade e da valorização cultural.    </p>
+     <a href="https://drive.google.com/drive/folders/16-y6moEKcbA-x79Dmj3VabI4-FpsHm8b" target="_blank">
+        <button>Saiba Mais</button>
+    </a> 
+</section>
+
+<!-- <section id="video">
+    <h2>Assista ao vídeo do Projeto Chico</h2> -->
+
+    <!-- Incorporando o vídeo do YouTube com autoplay, loop e mudo -->
+    <!-- <div class="video-container">
+      <iframe id="chico-video" 
+          src="https://www.youtube.com/embed/jdHQOXlituI?autoplay=1&loop=1&mute=1&playlist=jdHQOXlituI" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+  </div> -->
+
+    <!-- Botão para ativar o som -->
+    <!-- <button id="unmute-btn">Ativar Som</button>
+</section> -->
+
+<!-- Seção Como Interagir -->
+ <section id="interact">
+    <h2>Como Interagir com o Chico</h2>
+    <div class="interaction-steps">
+        <div class="step">
+            <h3>Passo 1</h3>
+            <p>Aproximar-se: Chegue perto do CHICO e observe suas reações. Ele responderá a sua presença com emoções em pixel art!</p>
+        </div>
+        <div class="step">
+            <h3>Passo 2</h3>
+            <p>Toque e Explore: Toque nas patas para ver como o CHICO reage. Experimente diferentes distâncias e interações para desbloquear novas emoções!</p>
+        </div>
+        <div class="step">
+            <h3>Passo 3</h3>
+            <p>Divirta-se!: Compartilhe sua experiência! Se o CHICO mostrar um joinha ou um coração, não esqueça de registrar o momento para as redes sociais!</p>
+        </div>
+    </div>
+</section> 
+
+<!-- Seção Maker -->
+<section id="maker">
+    <h2>Experiência Maker</h2>
+  <div class="maker-container">
+    <img src="img/reuniao.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+    <p>A jornada do caranguejo CHICO é um convite a explorar a criatividade e a inovação. Neste espaço, documentaremos cada passo do nosso processo, com registros visuais e descritivos que capturam a essência do nosso trabalho em equipe.</p>
+ </div>
+</section>
+
+<section class="contenair-ideacao">
+    <div class="row">
+        <div class="heading-section">
+            <h1 class="id">Ideação</h1>
+         <p >Tudo começa na fase de ideação, quando a equipe se reúne para desenvolver o conceito do caranguejo. Nesse processo, definimos os objetivos do projeto, que visam criar uma experiência interativa que valorize os símbolos da cultura local.</p>
+        </div>
+        
+     <div class="content-section">
+        <div class="card">
+            <img src="img/ideacao1.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+        </div>
+        <div class="card">
+            <img src="img/ideacao2.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+        </div>
+        <div class="card">   
+        <img src="img/ideacao.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+        </div> 
+     </div>
+    </div>
+ 
+</section>
+
+<section class="contenair-desenvolvimento">
+    <div class="row">
+        <div class="heading-section">
+            <h1 class="id">Desenvolvimento</h1>
+            <p>Serão implementados sensores de toque, temperatura, distância, câmera e luzes, utilizando tecnologias como Arduino e Raspberry Pi para captar dados e gerar interações. Cada sensor será configurado para responder a diferentes distâncias, criando um diálogo dinâmico com os visitantes.</p>
+        </div>
+
+        <div class="content-section">
+            <div class="card">
+                <img src="img/desenvolvi.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+             </div>
+
+             <div class="card">
+                <img src="img/desenvolvi1.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+             </div>
+
+             <div class="card">
+                <img src="img/desenvolvi2.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+             </div>
+        </div>
+        
+    </div>
+        
+    </section>
+    
+    <section class="contenair-ideacao">
+        <div class="row">
+            <div class="heading-section">
+                <h1 class="id">Testes</h1>
+                <p>Durante a fase de testes, a equipe desenvolveu e validou as interações, garantindo que os sensores respondessem adequadamente às distâncias estabelecidas. Uma tabela foi criada para relacionar teclas a emoções específicas, permitindo que as respostas do caranguejo se tornassem mais significativas e envolventes para os visitantes.</p>
+            </div>
+
+            <div class="content-section">
+                <div class="card">
+                    <img src="img/thinkcard.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+                </div>
+
+                <div class="card">
+                    <img src="img/testes2.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+                </div>
+
+                <div class="card">
+                    <img src="img/testes1.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<!-- Seção Equipe -->
+<section id="team">
+  <h2>Equipe</h2>
+  <!-- Container dos Cards da Equipe -->
+  <div class="carousel-container">
+      
+      
+      <div class="carousel-track">
+          <!-- Card de Participantes -->
+          
+          <div class="team-card">
+            <img src="img/carlos.enc" alt="Participante 9" class="team-photo">
+            <h3>Carlos Castilho</h3>
+            <p>Site</p>
+            <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5X2fsBXDbHMYc2nPz-H4III5Xo0eOM6CI&keywords=carlos%20castilhos&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=e61854c1-e74a-48a8-9c70-1774558cd688&spellCorrectionEnabled=true
+            " target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+            <div class="team-card">
+                <img src="img/samantha.jpeg" alt="Participante 8" class="team-photo">
+                <h3>Samantha Pimental</h3>
+                <p>Front-End</p>
+                <a href="https://www.linkedin.com/in/samantha-pimentel-54207292" target="_blank" class="linkedin-btn">
+                    <img src="linkedin-logo.png" alt="LinkedIn"> 
+                </a>
+            </div>
+            
+            <div class="team-card">
+                <img src="img/agata.jpg" alt="Participante 9" class="team-photo">
+                <h3>Ágata Maria</h3>
+                <p>Documentação</p>
+                <a href="https://www.linkedin.com/in/htamarf/" target="_blank" class="linkedin-btn">
+                    <img src="linkedin-logo.png" alt="LinkedIn"> 
+                </a>
+            </div>
+          
+            <div class="team-card">
+                <img src="img/gabriel.jpg" alt="Participante 9" class="team-photo">
+                <h3>Gabriel Felipe</h3>
+                <p>Hardware</p>
+                <a href="https://www.linkedin.com/in/gabriel-felipe-lins-campos-silva-03a043288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin-btn">
+                    <img src="linkedin-logo.png" alt="LinkedIn"> 
+                </a>
+            </div>
+
+          <div class="team-card">
+              <img src="img/maria.jpg" alt="Participante 2" class="team-photo">
+              <h3>Maria Augusta</h3>
+              <p>Gestão</p>
+              <a href="https://www.linkedin.com/in/m%C2%AA-augusta-fialho-0a7237178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin-btn">
+                  <img src="linkedin-logo.png" alt="LinkedIn">
+              </a>
+          </div>
+
+          <div class="team-card">
+              <img src="img/Alanna Beatriz.jpg" alt="Participante 3" class="team-photo">
+              <h3>Alanna Beatriz</h3>
+              <p>Front-End</p>
+              <a href="https://www.linkedin.com/in/alanna-santos-6b8633218/" target="_blank" class="linkedin-btn">
+                  <img src="linkedin-logo.png" alt="LinkedIn"> 
+              </a>
+          </div>
+
+          <div class="team-card">
+              <img src="img/vinicius.jpg" alt="Participante 4" class="team-photo">
+              <h3>Vinícius Oliveira</h3>
+              <p>Hardware</p>
+              <a href="https://www.linkedin.com/in/vin%C3%ADcius-oliveira-ads?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin-btn">
+                  <img src="linkedin-logo.png" alt="LinkedIn"> 
+              </a>
+          </div>
+
+          <div class="team-card">
+              <img src="img/vanessa.jpg" alt="Participante 5" class="team-photo">
+              <h3>Vanessa Matias </h3>
+              <p>Front-End</p>
+              <a href="https://www.linkedin.com/in/vanessamatiasdev/" target="_blank" class="linkedin-btn">
+                  <img src="linkedin-logo.png" alt="LinkedIn"> 
+              </a>
+          </div>
+
+          <div class="team-card">
+              <img src="img/arnott.jpg" alt="Participante 6" class="team-photo">
+              <h3>Arnott Ramos</h3>
+              <p>Hardware</p>
+              <a href="https://www.linkedin.com/in/arnottcaiado/" target="_blank" class="linkedin-btn">
+                  <img src="linkedin-logo.png" alt="LinkedIn"> 
+              </a>
+          </div>
+
+          <div class="team-card">
+              <img src="img/amanda.jpg" alt="Participante 7" class="team-photo">
+              <h3>Amanda Cruz</h3>
+              <p>Site</p>
+              <a href="https://www.linkedin.com/in/amanda-cruz-306707287/" target="_blank" class="linkedin-btn">
+                  <img src="linkedin-logo.png" alt="LinkedIn"> 
+              </a>
+          </div>
+         
+
+        <div class="team-card">
+            <img src="img/arthur.jpg" alt="Participante 9" class="team-photo">
+            <h3>Arthur Henrique</h3>
+            <p>Front-End</p>
+            <a href="https://www.linkedin.com/in/arthur-silveira-4058542a1/" target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+
+        <div class="team-card">
+            <img src="img/Lucas Leonides.jpg" alt="Participante 9" class="team-photo">
+            <h3>Lucas Leonides</h3>
+            <p>Hardware</p>
+            <a href="https://www.linkedin.com/in/lucas-leonides-555846299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+
+        <div class="team-card">
+            <img src="img/caio.jpg" alt="Participante 9" class="team-photo">
+            <h3>Caio Leão</h3>
+            <p>Front-End</p>
+            <a href="https://www.linkedin.com/in/caio-le%C3%A3o-2563bb273/" target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+
+        <div class="team-card">
+            <img src="img/mateus.jpg" alt="Participante 9" class="team-photo">
+            <h3>Matheus willian </h3>
+            <p>Front-End</p>
+            <a href="https://www.linkedin.com/in/matheus-willian-828710324
+            " target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+
+        <div class="team-card">
+            <img src="img/dayane.jpg" alt="Participante 9" class="team-photo">
+            <h3>Dayanni Rodrigues </h3>
+            <p>Documentação</p>
+            <a href="https://www.linkedin.com/in/dayanni-rodrigues-216740226/
+            " target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+
+        
+        
+        <div class="team-card">
+            <img src="img/ane2.jpg" alt="Participante 9" class="team-photo">
+            <h3>Ane Andrade</h3>
+            <p>Site</p>
+            <a href="https://www.linkedin.com/in/anedeandrade/ " target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+
+        <div class="team-card">
+            <img src="img/heloisa.enc" alt="Participante 9" class="team-photo">
+            <h3>Maria Heloysa</h3>
+            <p>Site</p>
+            <a href="https://www.linkedin.com/in/maria-heloysa-da-silva-machado/" target="_blank" class="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn"> 
+            </a>
+        </div>
+        
+      </div>
+      <p></p>
+          </section>
+      
+
+
+    <!-- Seção Patrocinadores -->
+     <!-- <section id="sponsors">
+        <h3>Patrocinadores</h3>
+        <div class="sponsors-logos">
+            <img src="logo-chico.png" alt="Senac">
+            <img src="logo-chico.png" alt="Sebrae">
+        </div>
+    </section>  -->
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2024 Projeto Chico - Todos os direitos reservados.</p>
+    </footer>
+
+   
+    <script src="chicoexpansion.js"></script>
+    <script src="som.js"></script>
+    <script src="scroll.js"></script>
+    <!-- Script para interação -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
