@@ -6,6 +6,7 @@
     <title>Projeto Chico</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="/manifest.json">
+    
 </head>
 <header>
     <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
@@ -15,8 +16,20 @@
             <li><a href="#about" class="nav-link">Sobre o Projeto</a></li>
             <li><a href="#team" class="nav-link">Equipe</a></li>
         </ul>
+        
+        
+
     </nav>
 </header>
+
+<div class="button-container">
+    <button id="main-button" class="config-button">⚙️</button>
+    <div id="submenu" class="submenu">
+        <button id="contrast-button">Alto Contraste</button>
+        <button onclick="adjustFontSize('increase')">A+</button>
+        <button onclick="adjustFontSize('decrease')">A-</button>
+    </div>
+</div>
 
 <!-- Seção Hero com animação do Chico -->
 <!-- Seção Hero com imagem do Chico -->

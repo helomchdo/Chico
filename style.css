@@ -571,4 +571,74 @@ button:hover {
     }
 }
 
+/* Estilo de alto contraste */
+.high-contrast {
+    background-color: #e1d4d4;
+    color: #a40202;
+}
 
+.high-contrast button {
+    background-color: #9b1d1d; /* Fundo do botão em alto contraste */
+    color: #8c1717; /* Cor do texto do botão em alto contraste */
+    border: 2px solid #6c0c0c; /* Borda do botão em alto contraste */
+}
+
+/* Estilos adicionais para garantir a visibilidade em alto contraste */
+.high-contrast h1, .high-contrast p {
+    color: #9e0e0e; /* Garante que o texto h1 e p sejam brancos */
+}
+/* Estilo para os botões */
+.button-container {
+    position: fixed; /* Fixa os botões na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    display: flex; /* Alinha os botões em linha */
+    flex-direction: column; /* Coloca os botões um em cima do outro */
+    gap: 10px; /* Espaçamento entre os botões */
+    z-index: 1000; /* Garante que os botões fiquem acima de outros elementos */
+    
+}
+
+/* Estilo dos botões */
+.button-container button {
+    background-color: #00ff99d1; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.button-container button:hover {
+    background-color: #00ff99; /* Cor ao passar o mouse */
+}
+/* Estilos para o submenu */
+.submenu {
+    display: none; /* Oculta o submenu por padrão */
+    flex-direction: column; /* Os botões dentro do submenu vão ficar em coluna */
+}
+
+.submenu.show {
+    display: flex; /* Exibe o submenu quando a classe 'show' for adicionada */
+}
+
+.config-button {
+    background-color: #5a4b4a; /* cor de fundo do botão */
+    color: #fff; /* cor do texto */
+    border: none; /* sem borda */
+    padding: 10px 20px; /* espaço interno */
+    border-radius: 5px; /* bordas arredondadas */
+    cursor: pointer; /* muda o cursor para pointer */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* transição suave */
+}
+
+.config-button:active {
+    transform: scale(0.95); /* reduz o tamanho ao clicar */
+    background-color: #b89b32; /* muda a cor de fundo ao clicar */
+}
+
+.clicked {
+    transform: rotate(360deg); /* rotação ao clicar */
+    transition: transform 0.2s ease; /* transição suave */
+}
