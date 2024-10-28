@@ -129,6 +129,18 @@ section h2 {
     margin-bottom: 20px;
 }
 
+#about {
+    max-width: 1200px; /* Limita a largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+    padding: 30px; /* Adiciona um espaço interno */
+}
+
+#about p {
+    margin-bottom: 20px; /* Adiciona espaço entre o parágrafo e o botão */
+}
+
+
+
 /* Interação - Passos */
 .interaction-steps {
     display: flex;
@@ -156,16 +168,28 @@ section h2 {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Alinha o conteúdo à esquera */
     padding: 30px;
     border-radius: 10px;
     margin: 0px auto;
 }
 
+.maker-container p {
+    margin-right: 20px; /* Adiciona espaço entre o texto e a imagem */;
+    flex: 1; /* Permite que o texto ocupe mais espaço */
+}
+
+.maker-container img {
+    width: auto; /* garante que a imagem ocupe 100% espaço disponivel */
+    height: auto;
+    max-width: 600px; /* Aumente o tamanho máximo se desejado */
+    max-height: 100%; /* Mantém a altura máxima para evitar distorção */
+}
+
 .id{
     font-family: 'Dk Longreach';
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     color: #ccc;
     letter-spacing: 2px;
     max-width: 90%;
@@ -181,9 +205,10 @@ section h2 {
     margin: auto;
 }
 
-.container .row .heading-section{
+.heading-section h1{
     width: 60%;
     text-align: center;
+    margin: 0 auto;
 }
 
 .container .row .heading-section p {
@@ -352,6 +377,8 @@ button:hover {
     .team-card {
         min-width: 33.33%; /* Exibe 3 cards lado a lado em telas ainda maiores */
     }
+
+    
 }
 
 @media (min-width: 1200px) {
@@ -391,10 +418,23 @@ button:hover {
         margin-bottom: 20px;
     }
 
-    .maker-container{
-        flex-direction: column;
-        text-align: center;
+    .maker-container {
+        flex-wrap: wrap; /* Permite que os itens se ajustem */
     }
+
+    .maker-container p {
+        margin-right: 0; /* Remove a margem direita */
+        margin-bottom: 20px; /* Adiciona margem abaixo do texto */
+        flex-basis: 100%; /* Faz com que o texto ocupe toda a largura */
+    }
+
+    .maker-container img {
+        max-width: 100%; /* A imagem ocupa 100% da largura disponível */
+        flex-basis: 100%; /* Faz com que a imagem ocupe toda a largura */
+    }
+
+
+    
     
     .content-section {
         flex-direction: column;
