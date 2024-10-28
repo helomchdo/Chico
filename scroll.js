@@ -69,3 +69,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }); 
 
 
+  function startReading() {
+    // Seleciona todas as seções com IDs especificados no menu
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        section.addEventListener('click', () => {
+            // Pega o texto do conteúdo da seção
+            let textToRead = section.innerText;
+            // Verifica se o navegador suporta a API de síntese de fala
+            if ('speechSynthesis' in window) {
+                // Cria uma nova instância de fala
+                let speech = new SpeechSynthesisUtterance(textToRead);
+                // Define o idioma para português
+                speech.lang = 'pt-BR';
+                // Inicia a leitura
+                window.speechSynthesis.speak(speech);
+            } else {
+                alert("Leitor de tela não suportado no seu navegador.");
+            }
+        });
+    });
+}
+
+// Adiciona o evento de clique para todos os botões
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => {
+        // Adiciona a classe 'clicked' ao botão
+        button.classList.add("clicked");
+
+        // Remove a classe 'clicked' após 400ms, o mesmo tempo da animação
+        setTimeout(() => {
+            button.classList.remove("clicked");
+        }, 400);
+    });
+});
