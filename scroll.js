@@ -77,19 +77,26 @@ document.addEventListener("DOMContentLoaded", () => {
         section.addEventListener('click', () => {
             // Pega o texto do conteúdo da seção
             let textToRead = section.innerText;
+
             // Verifica se o navegador suporta a API de síntese de fala
             if ('speechSynthesis' in window) {
-                // Cria uma nova instância de fala
-                let speech = new SpeechSynthesisUtterance(textToRead);
-                // Define o idioma para português
-                speech.lang = 'pt-BR';
-                // Inicia a leitura
-                window.speechSynthesis.speak(speech);
+                // Interrompe a leitura se ela já estiver ativa
+                if (window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                } else {
+                    // Cria uma nova instância de fala
+                    let speech = new SpeechSynthesisUtterance(textToRead);
+                    // Define o idioma para português
+                    speech.lang = 'pt-BR';
+                    // Inicia a leitura
+                    window.speechSynthesis.speak(speech);
+                }
             } else {
                 alert("Leitor de tela não suportado no seu navegador.");
             }
         });
     });
+    document.getElementById("submenu").style.display = "none";
 }
 
 // Adiciona o evento de clique para todos os botões
