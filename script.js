@@ -40,5 +40,3 @@ document.getElementById('prev-slide').addEventListener('click', function() {
 document.getElementById('next-slide').addEventListener('click', function() {
     moveCarousel(1); // Avançar
 });
-
-
