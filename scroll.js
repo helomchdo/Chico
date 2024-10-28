@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-    document.getElementById("submenu").style.display = "none";
+   
 }
 
 // Adiciona o evento de clique para todos os botões
