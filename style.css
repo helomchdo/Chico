@@ -58,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #F2561D;
+    color: #217623;
 }
 
 /* Hero Section */
@@ -78,7 +78,7 @@ nav ul li a:hover {
 #hero h1 {
     font-family: 'Dk Longreach';
     font-size: 3rem;
-    color: #F2561D;
+    color: #217623;
     letter-spacing: 2px;
     margin: 0; /* Remove margens extras */
 }
@@ -124,7 +124,7 @@ section {
 section h2 {
     font-family: 'Dk Longreach';
     font-size: 3rem;
-    color: #F2561D;
+    color: #217623;
     letter-spacing: 2px;
     margin-bottom: 20px;
 }
@@ -157,7 +157,7 @@ section h2 {
 }
 
 .step h3 {
-    color: #00ff99;
+    color: #217623;
 }
 
 .step:hover {
@@ -195,7 +195,7 @@ section h2 {
 .id{
     font-family: 'Dk Longreach';
     font-size: 3rem;
-    color: #F2561D;
+    color: #217623;
     letter-spacing: 2px;
     margin-bottom: 20px;
     text-align: center;
@@ -327,7 +327,7 @@ footer {
 }
 
 button {
-    background-color: #01d37f;
+    background-color: #217623;
     color: #0b0505;
     border: none;
     padding: 10px 20px;
@@ -338,7 +338,7 @@ button {
 }
 
 button:hover {
-    background-color: #00ff99;
+    background-color: #217623;
 }
 
 #video {
@@ -347,7 +347,7 @@ button:hover {
 }
 
 #video iframe {
-    border: 5px solid #00ff99;
+    border: 5px solid #217623;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -363,7 +363,7 @@ button:hover {
     margin: 10px auto; /* Centraliza o botão horizontalmente */
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #01d37f;
+    background-color: #217623;
     color: #0b0505;
     border: none;
     border-radius: 5px;
@@ -371,7 +371,7 @@ button:hover {
 }
 
 #unmute-btn:hover {
-    background-color: #00ff99;
+    background-color: #217623;
 }
 
 /* Responsividade para dispositivos móveis */
@@ -628,7 +628,7 @@ button:hover {
 
 /* Estilo dos botões */
 .button-container button {
-    background-color: #00ff99d1; /* Cor de fundo do botão */
+    background-color: #217623; /* Cor de fundo do botão */
     color: #ffffff; /* Cor do texto do botão */
     border: none; /* Sem borda */
     padding: 10px 15px; /* Espaçamento interno */
@@ -638,7 +638,7 @@ button:hover {
 }
 
 .button-container button:hover {
-    background-color: #00ff99; /* Cor ao passar o mouse */
+    background-color: #217623; /* Cor ao passar o mouse */
 }
 /* Estilos para o submenu */
 .submenu {
@@ -673,7 +673,7 @@ button:hover {
 /* Efeito de clique do botão */
 button:active {
     transform: scale(0.95); /* Leve redução no tamanho ao clicar */
-    background-color: #01d37f; /* Escurece um pouco ao clicar */
+    background-color: #217623; /* Escurece um pouco ao clicar */
 }
 
 /* Animação de destaque ao soltar o clique */
@@ -685,14 +685,14 @@ button.clicked {
 @keyframes highlight {
     0% {
         transform: scale(1.05);
-        background-color: #01d37f;
+        background-color: #217623;
     }
     50% {
         transform: scale(1);
-        background-color: #01d37f;
+        background-color: #217623;
     }
     100% {
         transform: scale(1.05);
-        background-color: #01d37f;
+        background-color: #217623;
     }
 }
