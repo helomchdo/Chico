@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'roboto', sans-serif;
 }
 @font-face {
     font-family: 'DK Longreach';
@@ -186,13 +186,20 @@ section h2 {
     max-height: 100%; /* Mantém a altura máxima para evitar distorção */
 }
 
+.heading-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .id{
     font-family: 'Dk Longreach';
-    margin-top: 10px;
-    font-size: 1.8rem;
-    color: #ccc;
+    font-size: 3rem;
+    color: #F2561D;
     letter-spacing: 2px;
-    max-width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-inline: auto;
 }
 
 .contenair-ideacao{
@@ -205,11 +212,6 @@ section h2 {
     margin: auto;
 }
 
-.heading-section h1{
-    width: 60%;
-    text-align: center;
-    margin: 0 auto;
-}
 
 .container .row .heading-section p {
     margin-top: 15px;
@@ -260,7 +262,7 @@ section h2 {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    overflow: hidden; /* Esconde os cards que estão fora do container */
+    overflow: hidden; 
 }
 
 
@@ -433,7 +435,9 @@ button:hover {
         flex-basis: 100%; /* Faz com que a imagem ocupe toda a largura */
     }
 
-
+    .id{
+        font-size: 2.5rem;
+    }
     
     
     .content-section {
@@ -503,24 +507,6 @@ button:hover {
     .linkedin-btn {
         width: 80px;
         height: 35px;
-    }
-
-    .carousel-container {
-        padding: 0 20px;
-    }
-
-    .carousel-track {
-        display: flex;
-        justify-content: center; /* Centraliza o card visível */
-    }
-
-    .team-card {
-        min-width: 90%; /* Ajusta o tamanho do card em telas menores */
-    }
-
-    .team-photo {
-        width: 60px;
-        height: 60px;
     }
 
     /* Ajustar a imagem e o vídeo para garantir a responsividade */
