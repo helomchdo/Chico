@@ -78,6 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // Pega o texto do conteúdo da seção
             let textToRead = section.innerText;
 
+            // Pega as descrições de imagens (atributo alt) e adiciona ao texto
+            const images = section.querySelectorAll('img');
+            images.forEach(img => {
+                if (img.alt) {
+                    textToRead += ' ' + img.alt;
+                }
+            });
+
             // Verifica se o navegador suporta a API de síntese de fala
             if ('speechSynthesis' in window) {
                 // Interrompe a leitura se ela já estiver ativa
@@ -96,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-   
 }
+
 
 // Adiciona o evento de clique para todos os botões
 document.querySelectorAll("button").forEach(button => {
