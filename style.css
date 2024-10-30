@@ -1,3 +1,38 @@
+/* Estilização swiper */
+:root {
+    /* Cor do bullet ativo */
+    --swiper-pagination-color: #217623;
+  
+    /* Posicionamento da paginação */
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 16px;
+    --swiper-pagination-bottom: 16px;
+    --swiper-pagination-top: auto;
+  
+    /* Cor do número de fração (para paginação fracionada) */
+    --swiper-pagination-fraction-color: #000;
+  
+    /* Cor e tamanho do fundo da barra de progresso (para paginação de progresso) */
+    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.15);
+    --swiper-pagination-progressbar-size: 6px;
+  
+    /* Tamanho e espaçamento dos bullets */
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+  
+    /* Cor e opacidade dos bullets inativos */
+    --swiper-pagination-bullet-inactive-color: #ccc;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+  
+    /* Opacidade do bullet ativo */
+    --swiper-pagination-bullet-opacity: 1;
+  
+    /* Espaçamento horizontal e vertical entre bullets */
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-bullet-vertical-gap: 8px;
+  }
+
 /* Reset básico */
 * {
     margin: 0;
@@ -5,10 +40,12 @@
     box-sizing: border-box;
     font-family: 'roboto', sans-serif;
 }
+
 @font-face {
     font-family: 'DK Longreach';
     src: url("DK\ Longreach.otf");
 }
+
 html {
     overflow-x: hidden;
 }
@@ -25,7 +62,8 @@ body {
 }
 
 .container {
-    overflow-x: hidden; /* Impede a rolagem horizontal neste contêiner */
+    overflow-x: hidden;
+    /* Impede a rolagem horizontal neste contêiner */
 }
 
 
@@ -64,7 +102,8 @@ nav ul li a:hover {
 /* Hero Section */
 /* Estilização da Seção Hero */
 #hero {
-    height: 100vh; /* Ocupa 100% da altura da viewport */
+    height: 100vh;
+    /* Ocupa 100% da altura da viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,7 +111,8 @@ nav ul li a:hover {
     background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
     text-align: center;
     padding: 20px;
-    overflow-x: hidden; /* Remove qualquer scroll horizontal */
+    overflow-x: hidden;
+    /* Remove qualquer scroll horizontal */
 }
 
 #hero h1 {
@@ -80,7 +120,8 @@ nav ul li a:hover {
     font-size: 3rem;
     color: #217623;
     letter-spacing: 2px;
-    margin: 0; /* Remove margens extras */
+    margin: 0;
+    /* Remove margens extras */
 }
 
 #hero p {
@@ -89,29 +130,35 @@ nav ul li a:hover {
     font-size: 1.2rem;
     color: #ccc;
     letter-spacing: 2px;
-    max-width: 90%; /* Limita o texto a 90% da largura da tela para melhor legibilidade */
+    max-width: 90%;
+    /* Limita o texto a 90% da largura da tela para melhor legibilidade */
 }
 
 /* Estilização do Contêiner de Imagem do Chico */
 .chico-robot {
     margin-top: 30px;
     width: 100%;
-    max-width: 736px; /* Limita a largura máxima */
+    max-width: 736px;
+    /* Limita a largura máxima */
     height: auto;
     display: flex;
-    justify-content: center; /* Centraliza a imagem */
+    justify-content: center;
+    /* Centraliza a imagem */
     transition: transform 0.5s ease;
     overflow: hidden;
 }
 
 .chico-image {
-    max-width: 100%; /* Garante que a imagem seja 100% responsiva */
-    height: auto; /* Mantém a proporção correta */
+    max-width: 100%;
+    /* Garante que a imagem seja 100% responsiva */
+    height: auto;
+    /* Mantém a proporção correta */
     transition: transform 0.5s ease;
 }
 
 #chico-robot:active .chico-image {
-    transform: scale(1.5) rotate(-10deg); /* Expansão ao clicar na imagem */
+    transform: scale(1.5) rotate(-10deg);
+    /* Expansão ao clicar na imagem */
 }
 
 
@@ -130,13 +177,17 @@ section h2 {
 }
 
 #about {
-    max-width: 1200px; /* Limita a largura máxima da seção */
-    margin: 0 auto; /* Centraliza a seção */
-    padding: 30px; /* Adiciona um espaço interno */
+    max-width: 1200px;
+    /* Limita a largura máxima da seção */
+    margin: 0 auto;
+    /* Centraliza a seção */
+    padding: 30px;
+    /* Adiciona um espaço interno */
 }
 
 #about p {
-    margin-bottom: 20px; /* Adiciona espaço entre o parágrafo e o botão */
+    margin-bottom: 20px;
+    /* Adiciona espaço entre o parágrafo e o botão */
 }
 
 
@@ -164,26 +215,33 @@ section h2 {
     background-color: #444;
 }
 
-.maker-container{
+.maker-container {
     max-width: 1200px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinha o conteúdo à esquera */
+    justify-content: flex-start;
+    /* Alinha o conteúdo à esquera */
     padding: 30px;
-    border-radius: 10px;
+    gap: 20px;
     margin: 0px auto;
 }
 
 .maker-container p {
-    margin-right: 20px; /* Adiciona espaço entre o texto e a imagem */;
-    flex: 1; /* Permite que o texto ocupe mais espaço */
+    margin-right: 20px;
+    /* Adiciona espaço entre o texto e a imagem */
+    ;
+    flex: 1;
+    /* Permite que o texto ocupe mais espaço */
 }
 
 .maker-container img {
-    width: auto; /* garante que a imagem ocupe 100% espaço disponivel */
+    width: auto;
+    /* garante que a imagem ocupe 100% espaço disponivel */
     height: auto;
-    max-width: 600px; /* Aumente o tamanho máximo se desejado */
-    max-height: 100%; /* Mantém a altura máxima para evitar distorção */
+    max-width: 600px;
+    /* Aumente o tamanho máximo se desejado */
+    max-height: 100%;
+    /* Mantém a altura máxima para evitar distorção */
 }
 
 .heading-section {
@@ -192,7 +250,7 @@ section h2 {
     align-items: center;
 }
 
-.id{
+.id {
     font-family: 'Dk Longreach';
     font-size: 3rem;
     color: #217623;
@@ -202,12 +260,13 @@ section h2 {
     margin-inline: auto;
 }
 
-.contenair-ideacao{
+.contenair-ideacao {
     width: 100%;
     min-height: 100vh;
     background-color: #1a1a1a;
 }
-.container .row{
+
+.container .row {
     width: 855;
     margin: auto;
 }
@@ -219,7 +278,13 @@ section h2 {
     line-height: 1.5;
 }
 
-.content-section{
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.content-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,10 +304,14 @@ section h2 {
 /* Track que contém todos os cards */
 .carousel-track {
     display: flex;
-    overflow-x: auto; /* Ativa o scroll horizontal */
-    scroll-snap-type: x mandatory; /* Snap para cards inteiros */
-    gap: 10px; /* Espaçamento entre os cards */
-    padding-bottom: 10px; /* Adiciona espaçamento na parte inferior */
+    overflow-x: auto;
+    /* Ativa o scroll horizontal */
+    scroll-snap-type: x mandatory;
+    /* Snap para cards inteiros */
+    gap: 10px;
+    /* Espaçamento entre os cards */
+    padding-bottom: 10px;
+    /* Adiciona espaçamento na parte inferior */
 }
 
 /* Estilo dos cards */
@@ -251,10 +320,12 @@ section h2 {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 220px; /* Largura padrão dos cards */
+    width: 220px;
+    /* Largura padrão dos cards */
     flex: 0 0 220px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start; /* Faz com que cada card se alinhe ao início ao scrollar */
+    scroll-snap-align: start;
+    /* Faz com que cada card se alinhe ao início ao scrollar */
 }
 
 /* Para responsividade */
@@ -262,7 +333,7 @@ section h2 {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 
@@ -281,7 +352,7 @@ section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:  #0f0f0f;
+    background-color: #0f0f0f;
     width: 100px;
     height: 40px;
     border-radius: 5px;
@@ -359,8 +430,10 @@ button:hover {
 }
 
 #unmute-btn {
-    display: block; /* Garante que o botão ocupe a linha inteira */
-    margin: 10px auto; /* Centraliza o botão horizontalmente */
+    display: block;
+    /* Garante que o botão ocupe a linha inteira */
+    margin: 10px auto;
+    /* Centraliza o botão horizontalmente */
     padding: 10px 20px;
     font-size: 16px;
     background-color: #217623;
@@ -377,15 +450,17 @@ button:hover {
 /* Responsividade para dispositivos móveis */
 @media (min-width: 1024px) {
     .team-card {
-        min-width: 33.33%; /* Exibe 3 cards lado a lado em telas ainda maiores */
+        min-width: 33.33%;
+        /* Exibe 3 cards lado a lado em telas ainda maiores */
     }
 
-    
+
 }
 
 @media (min-width: 1200px) {
     .team-card {
-        min-width: 25%; /* Exibe 4 cards lado a lado em telas grandes */
+        min-width: 25%;
+        /* Exibe 4 cards lado a lado em telas grandes */
     }
 
 
@@ -421,25 +496,31 @@ button:hover {
     }
 
     .maker-container {
-        flex-wrap: wrap; /* Permite que os itens se ajustem */
+        flex-wrap: wrap;
+        /* Permite que os itens se ajustem */
     }
 
     .maker-container p {
-        margin-right: 0; /* Remove a margem direita */
-        margin-bottom: 20px; /* Adiciona margem abaixo do texto */
-        flex-basis: 100%; /* Faz com que o texto ocupe toda a largura */
+        margin-right: 0;
+        /* Remove a margem direita */
+        margin-bottom: 20px;
+        /* Adiciona margem abaixo do texto */
+        flex-basis: 100%;
+        /* Faz com que o texto ocupe toda a largura */
     }
 
     .maker-container img {
-        max-width: 100%; /* A imagem ocupa 100% da largura disponível */
-        flex-basis: 100%; /* Faz com que a imagem ocupe toda a largura */
+        max-width: 100%;
+        /* A imagem ocupa 100% da largura disponível */
+        flex-basis: 100%;
+        /* Faz com que a imagem ocupe toda a largura */
     }
 
-    .id{
+    .id {
         font-size: 2.5rem;
     }
-    
-    
+
+
     .content-section {
         flex-direction: column;
     }
@@ -462,17 +543,24 @@ button:hover {
     #video {
         width: 100%;
         height: auto;
-        max-width: 100%; /* Evita que a largura exceda o contêiner */
+        max-width: 100%;
+        /* Evita que a largura exceda o contêiner */
     }
+
     #chico-video {
-        width: 100%; /* Garante que o iframe ocupe 100% da largura do contêiner */
-        height: auto; /* Ajusta a altura automaticamente */
+        width: 100%;
+        /* Garante que o iframe ocupe 100% da largura do contêiner */
+        height: auto;
+        /* Ajusta a altura automaticamente */
     }
 
     #unmute-btn {
-        width: 100%; /* O botão ocupará 100% da largura disponível */
-        padding: 10px; /* Ajusta o espaçamento interno */
-        font-size: 14px; /* Reduz o tamanho da fonte */
+        width: 100%;
+        /* O botão ocupará 100% da largura disponível */
+        padding: 10px;
+        /* Ajusta o espaçamento interno */
+        font-size: 14px;
+        /* Reduz o tamanho da fonte */
     }
 
 }
@@ -514,17 +602,22 @@ button:hover {
     #video {
         width: 100%;
         height: auto;
-        max-width: 100%; /* Evita que a largura exceda o contêiner */
+        max-width: 100%;
+        /* Evita que a largura exceda o contêiner */
     }
 
     #unmute-btn {
-        width: 100%; /* O botão continua ocupando 100% da largura */
-        padding: 8px; /* Reduz um pouco o espaçamento interno */
-        font-size: 14px; /* Mantém o tamanho da fonte reduzido */
+        width: 100%;
+        /* O botão continua ocupando 100% da largura */
+        padding: 8px;
+        /* Reduz um pouco o espaçamento interno */
+        font-size: 14px;
+        /* Mantém o tamanho da fonte reduzido */
     }
 }
 
 @media (max-width: 360px) {
+
     /* Ajustar o tamanho do logo no header */
     .logo {
         height: 40px;
@@ -549,7 +642,8 @@ button:hover {
     #video {
         width: 100%;
         height: auto;
-        max-width: 100%; /* Evita que a largura exceda o contêiner */
+        max-width: 100%;
+        /* Evita que a largura exceda o contêiner */
     }
 
     /* Ajustar tamanho dos passos */
@@ -569,7 +663,8 @@ button:hover {
     }
 
     /* Ajustar botões do carrossel */
-    .prev-btn, .next-btn {
+    .prev-btn,
+    .next-btn {
         padding: 8px;
     }
 
@@ -591,9 +686,12 @@ button:hover {
     }
 
     #unmute-btn {
-        width: 100%; /* O botão ocupa a largura completa */
-        padding: 8px 15px; /* Ajusta o espaçamento interno */
-        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+        width: 100%;
+        /* O botão ocupa a largura completa */
+        padding: 8px 15px;
+        /* Ajusta o espaçamento interno */
+        font-size: 12px;
+        /* Reduz ainda mais o tamanho da fonte */
     }
 }
 
@@ -605,75 +703,113 @@ button:hover {
 }
 
 .high-contrast button {
-    background-color: #9b1d1d; /* Fundo do botão em alto contraste */
-    color: #8c1717; /* Cor do texto do botão em alto contraste */
-    border: 2px solid #6c0c0c; /* Borda do botão em alto contraste */
+    background-color: #9b1d1d;
+    /* Fundo do botão em alto contraste */
+    color: #8c1717;
+    /* Cor do texto do botão em alto contraste */
+    border: 2px solid #6c0c0c;
+    /* Borda do botão em alto contraste */
 }
 
 /* Estilos adicionais para garantir a visibilidade em alto contraste */
-.high-contrast h1, .high-contrast p {
-    color: #9e0e0e; /* Garante que o texto h1 e p sejam brancos */
+.high-contrast h1,
+.high-contrast p {
+    color: #9e0e0e;
+    /* Garante que o texto h1 e p sejam brancos */
 }
+
 /* Estilo para os botões */
 .button-container {
-    position: fixed; /* Fixa os botões na tela */
-    bottom: 20px; /* Distância do fundo da tela */
-    right: 20px; /* Distância da direita da tela */
-    display: flex; /* Alinha os botões em linha */
-    flex-direction: column; /* Coloca os botões um em cima do outro */
-    gap: 10px; /* Espaçamento entre os botões */
-    z-index: 1000; /* Garante que os botões fiquem acima de outros elementos */
-    
+    position: fixed;
+    /* Fixa os botões na tela */
+    bottom: 20px;
+    /* Distância do fundo da tela */
+    right: 20px;
+    /* Distância da direita da tela */
+    display: flex;
+    /* Alinha os botões em linha */
+    flex-direction: column;
+    /* Coloca os botões um em cima do outro */
+    gap: 10px;
+    /* Espaçamento entre os botões */
+    z-index: 1000;
+    /* Garante que os botões fiquem acima de outros elementos */
+
 }
 
 /* Estilo dos botões */
 .button-container button {
-    background-color: #217623; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    padding: 10px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 16px; /* Tamanho da fonte */
+    background-color: #217623;
+    /* Cor de fundo do botão */
+    color: #ffffff;
+    /* Cor do texto do botão */
+    border: none;
+    /* Sem borda */
+    padding: 10px 15px;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    font-size: 16px;
+    /* Tamanho da fonte */
 }
 
 .button-container button:hover {
-    background-color: #217623; /* Cor ao passar o mouse */
+    background-color: #217623;
+    /* Cor ao passar o mouse */
 }
+
 /* Estilos para o submenu */
 .submenu {
-    display: none; /* Oculta o submenu por padrão */
-    flex-direction: column; /* Os botões dentro do submenu vão ficar em coluna */
+    display: none;
+    /* Oculta o submenu por padrão */
+    flex-direction: column;
+    /* Os botões dentro do submenu vão ficar em coluna */
 }
 
 .submenu.show {
-    display: flex; /* Exibe o submenu quando a classe 'show' for adicionada */
+    display: flex;
+    /* Exibe o submenu quando a classe 'show' for adicionada */
 }
 
 .config-button {
-    background-color: #5a4b4a; /* cor de fundo do botão */
-    color: #fff; /* cor do texto */
-    border: none; /* sem borda */
-    padding: 10px 20px; /* espaço interno */
-    border-radius: 5px; /* bordas arredondadas */
-    cursor: pointer; /* muda o cursor para pointer */
-    transition: transform 0.2s ease, background-color 0.2s ease; /* transição suave */
+    background-color: #5a4b4a;
+    /* cor de fundo do botão */
+    color: #fff;
+    /* cor do texto */
+    border: none;
+    /* sem borda */
+    padding: 10px 20px;
+    /* espaço interno */
+    border-radius: 5px;
+    /* bordas arredondadas */
+    cursor: pointer;
+    /* muda o cursor para pointer */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    /* transição suave */
 }
 
 .config-button:active {
-    transform: scale(0.95); /* reduz o tamanho ao clicar */
-    background-color: #b89b32; /* muda a cor de fundo ao clicar */
+    transform: scale(0.95);
+    /* reduz o tamanho ao clicar */
+    background-color: #b89b32;
+    /* muda a cor de fundo ao clicar */
 }
 
 .clicked {
-    transform: rotate(360deg); /* rotação ao clicar */
-    transition: transform 0.2s ease; /* transição suave */
+    transform: rotate(360deg);
+    /* rotação ao clicar */
+    transition: transform 0.2s ease;
+    /* transição suave */
 }
 
 /* Efeito de clique do botão */
 button:active {
-    transform: scale(0.95); /* Leve redução no tamanho ao clicar */
-    background-color: #217623; /* Escurece um pouco ao clicar */
+    transform: scale(0.95);
+    /* Leve redução no tamanho ao clicar */
+    background-color: #217623;
+    /* Escurece um pouco ao clicar */
 }
 
 /* Animação de destaque ao soltar o clique */
@@ -687,10 +823,12 @@ button.clicked {
         transform: scale(1.05);
         background-color: #217623;
     }
+
     50% {
         transform: scale(1);
         background-color: #217623;
     }
+
     100% {
         transform: scale(1.05);
         background-color: #217623;
