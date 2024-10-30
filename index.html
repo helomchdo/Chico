@@ -11,8 +11,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <header>
-    <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
-    <nav>
+    <!-- ======== NAVBAR MOBILE ======== -->
+    <nav class="navbar-mobile">
+        <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
+        <div class="bx" id="bx"></div>
+    </nav>
+    
+    <nav class="navbar-desktop">
+        <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
         <ul>
             <!-- <li><a href="#interact" class="nav-link">Como Interagir</a></li> -->
             <li><a href="#about" class="nav-link">Sobre o Projeto</a></li>
@@ -239,20 +245,6 @@
     <div class="row">
         <div class="heading-section">
             <h1 class="id">Refinamento</h1>
-        </div>
-
-        <div class="content-section">
-            <div class="card">
-                
-            </div>
-
-            <div class="card">
-                
-            </div>
-
-            <div class="card">
-                
-            </div>
         </div>
 
         <!-- Slider main container -->
@@ -570,6 +562,7 @@
 
 <!-- Script para interação -->
 <script src="script.js"></script>
+<script src="menuMobile.js"></script>
 
 </body>
 

@@ -80,6 +80,19 @@ header {
     height: 100px;
 }
 
+.navbar-desktop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-desktop {
+      display: none;
+    }
+  }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -97,6 +110,80 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #217623;
+}
+
+/* Estilização menu hamburguer */
+
+.navbar-mobile {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+}
+  
+.bx {
+width: 46px;
+height: 46px;
+position: relative;
+cursor: pointer;
+z-index: 999;
+}
+.bx::after {
+content: "";
+position: absolute;
+top: 40%;
+left: 16%;
+width: 70%;
+height: 3px;
+transition: 0.7s ease;
+background-color: #217623;
+}
+.bx::before {
+content: "";
+position: absolute;
+top: 64%;
+left: 16%;
+width: 70%;
+height: 3px;
+transition: 0.7s ease;
+background-color: #217623;
+}
+
+.active-bx {
+width: 46px;
+height: 46px;
+position: relative;
+cursor: pointer;
+z-index: 999;
+}
+.active-bx::after {
+content: "";
+position: absolute;
+top: 50%;
+left: 16%;
+transform: rotate(-135deg);
+width: 70%;
+height: 3px;
+background-color: #217623;
+}
+.active-bx::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 16%;
+transform: rotate(315deg);
+width: 70%;
+height: 3px;
+background-color: #217623;
 }
 
 /* Hero Section */
@@ -227,11 +314,7 @@ section h2 {
 }
 
 .maker-container p {
-    margin-right: 20px;
-    /* Adiciona espaço entre o texto e a imagem */
-    ;
-    flex: 1;
-    /* Permite que o texto ocupe mais espaço */
+    text-align: left;
 }
 
 .maker-container img {
@@ -264,6 +347,11 @@ section h2 {
     width: 100%;
     min-height: 100vh;
     background-color: #1a1a1a;
+}
+
+.contenair-ideacao p, .contenair-desenvolvimento p{
+    margin-top: 20px;
+    text-align: left;
 }
 
 .container .row {
@@ -462,8 +550,16 @@ button:hover {
         min-width: 25%;
         /* Exibe 4 cards lado a lado em telas grandes */
     }
+}
 
+@media (max-width: 970px) {
+    .maker-container {
+        flex-direction: column;
+    }
 
+    .maker-container p {
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 768px) {
