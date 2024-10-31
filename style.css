@@ -777,6 +777,10 @@ button:hover {
         font-size: 14px;
         /* Mantém o tamanho da fonte reduzido */
     }
+
+    .sponsors-logos img {
+        width: 70px; /* Reduz o tamanho das imagens */
+    }
 }
 
 @media (max-width: 360px) {
