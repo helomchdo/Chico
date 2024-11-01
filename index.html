@@ -10,583 +10,587 @@
     <!-- Bilioteca slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<header>
-    <!-- ======== NAVBAR MOBILE ======== -->
-    <nav class="navbar-mobile nav">
-        <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
-        <div class="bx" id="bx"></div>
-        <ul class="nav-list">
-            <li><a href="#about" class="nav-link link-mobile">Sobre o Projeto</a></li>
-            <div class="divider"></div>
-            <li><a href="#interact" class="nav-link link-mobile">Interaja com o Chico</a></li>
-            <div class="divider"></div>
-            <li><a href="#maker" class="nav-link link-mobile">Experiência maker</a></li>
-            <div class="divider"></div>
-            <li><a href="#team" class="nav-link link-mobile">Equipe</a></li>
-        </ul>
-    </nav>
+<body>
     
-    <nav class="navbar-desktop">
-        <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
-        <ul>
-            <li><a href="#about" class="nav-link">Sobre o Projeto</a></li>
-            <li><a href="#interact" class="nav-link">Interaja com o Chico</a></li>
-            <li><a href="#maker" class="nav-link">Experiência maker</a></li>
-            <li><a href="#team" class="nav-link">Equipe</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="button-container">
-    <button id="main-button" class="config-button">
-        <img src="/img/acessibilidade.png" alt="Personagem Helena de Acessibilidade" style="width: 24px; height: 24px;">
-    </button>
-    <div id="submenu" class="submenu">
-        <button id="contrast-button">Alto Contraste</button>
-        <button onclick="adjustFontSize('increase')">A+</button>
-        <button onclick="adjustFontSize('decrease')">A-</button>
-        <button onclick="startReading()">🔊 Ativar Leitor de Tela</button>
-    </div>
-</div>
-<!-- Seção Hero com animação do Chico -->
-<!-- Seção Hero com imagem do Chico -->
-<section id="hero">
-    <h1>Conheça Chico,</h1>
-    <p> O caranguejo interativo!</p>
-    <div id="chico-robot" class="chico-robot">
-        <img src="ezgif.com-animated-gif-maker.gif" alt="Chico, o caranguejo robótico com corpo retangular verde e olhos expressivos, levantando uma das garras" class="chico-image">
-
-    </div>
-</section>
-
-<!-- Seção Sobre o Projeto -->
-<section id="about">
-    <h2>Sobre o Projeto</h2>
-    <img src="sobre.png" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
-    <p>O caranguejo CHICO é um símbolo de resiliência e cultura pernambucana, renascido a partir de lixo eletrônico para
-        unir inovação e tradição. Em uma escultura de 2,4 m x 1,5 m, CHICO ganha vida através de Arduino, Raspberry Pi e
-        sensores que captam toques, temperatura e distância, transformando a interação com o público em uma experiência
-        gamificada e emocionante. Suas expressões em pixel art refletem emoções que se conectam de forma lúdica e
-        significativa com os visitantes, promovendo, por meio do motor de jogos Godot, uma reflexão sobre a importância
-        da sustentabilidade e da valorização cultural.
-    </p>
-    
-    <div>
-        <a href="https://drive.google.com/drive/folders/16-y6moEKcbA-x79Dmj3VabI4-FpsHm8b" target="_blank" aria-label="Saiba mais sobre o projeto do caranguejo CHICO">
-            <button>Saiba Mais</button>
-        </a>
-    </div>
-</section>
-
-
-<!-- <section id="video">
-    <h2>Assista ao vídeo do Projeto Chico</h2> -->
-
-<!-- Incorporando o vídeo do YouTube com autoplay, loop e mudo -->
-<!-- <div class="video-container">
-      <iframe id="chico-video" 
-          src="https://www.youtube.com/embed/jdHQOXlituI?autoplay=1&loop=1&mute=1&playlist=jdHQOXlituI" 
-          title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen></iframe>
-  </div> -->
-
-<!-- Botão para ativar o som -->
-<!-- <button id="unmute-btn">Ativar Som</button>
-</section> -->
-
-<!-- Seção Como Interagir -->
-<section id="interact">
-    <h2>Como Interagir com o Chico</h2>
-    <div class="interaction-steps">
-        <div class="step">
-            <h3>Passo 1</h3>
-            <p>Aproximar-se: Chegue perto do CHICO e observe suas reações. Ele responderá a sua presença com emoções em
-                pixel art!</p>
-        </div>
-        <div class="step">
-            <h3>Passo 2</h3>
-            <p>Toque e Explore: Toque nas patas para ver como o CHICO reage. Experimente diferentes distâncias e
-                interações para desbloquear novas emoções!</p>
-        </div>
-        <div class="step">
-            <h3>Passo 3</h3>
-            <p>Divirta-se!: Compartilhe sua experiência! Se o CHICO mostrar um joinha ou um coração, não esqueça de
-                registrar o momento para as redes sociais!</p>
-        </div>
-    </div>
-</section>
-
-<!-- Seção Maker -->
-<section id="maker">
-    <h2>Experiência Maker</h2>
-    <div class="maker-container">
-        <img src="img/reuniao.jpg" alt="Imagem sobre o projeto">
-        <p>A jornada do caranguejo CHICO é um convite a explorar a criatividade e a inovação. Neste espaço,
-            documentaremos cada passo do nosso processo, com registros visuais e descritivos que capturam a essência do
-            nosso trabalho em equipe.</p>
-    </div>
-</section>
-
-<!-- Seção Ideação -->
-<section class="contenair-ideacao">
-    <div class="row">
-        <div class="heading-section">
-            <h1 class="id">Ideação</h1>
-        </div>
-
-        <!-- Slider main container -->
-        <div class="swiper swiper-navigation-disabled">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="img/ideacao001.webp" alt="Imagem sobre o projeto" style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/ideacao2.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/ideacao.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:600px;">
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
-        <p>Tudo começa na fase de ideação, quando a equipe se reúne para desenvolver o conceito do caranguejo. Nesse
-            processo, definimos os objetivos do projeto, que visam criar uma experiência interativa que valorize os
-            símbolos da cultura local.</p>
-    </div>
-</section>
-
-<!-- Seção Desenvolvimento -->
-<section class="contenair-desenvolvimento">
-    <div class="row">
-        <div class="heading-section">
-            <h1 class="id">Desenvolvimento</h1>
-        </div>
-
-        <!-- Slider main container -->
-        <div class="swiper swiper-navigation-disabled">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="img/desenvolvi.jpg" alt="Dois jovens estão trabalhando juntos; um está conectando fios a um sensor enquanto o outro observa atentamente." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/desenvolvi1.jpg" alt="Vários jovens estão envolvidos em atividades; dois estão manipulando sensores, enquanto três estão concentrados em um notebook." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/desenvolvi2.jpg" alt="Uma jovem realiza uma soldagem, enquanto uma figura em pé ao seu lado permanece fora do foco, sem mostrar o rosto." style="width:100%; max-width:600px;">
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
+    <header>
+        <!-- ======== NAVBAR MOBILE ======== -->
+        <nav class="navbar-mobile nav">
+            <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
+            <div class="bx" id="bx"></div>
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link link-mobile">Sobre o Projeto</a></li>
+                <div class="divider"></div>
+                <li><a href="#interact" class="nav-link link-mobile">Interaja com o Chico</a></li>
+                <div class="divider"></div>
+                <li><a href="#maker" class="nav-link link-mobile">Experiência maker</a></li>
+                <div class="divider"></div>
+                <li><a href="#team" class="nav-link link-mobile">Equipe</a></li>
+            </ul>
+        </nav>
         
-        <p>Serão implementados sensores de toque, temperatura, distância, câmera e luzes, utilizando tecnologias como
-            Arduino e Raspberry Pi para captar dados e gerar interações. Cada sensor será configurado para responder a
-            diferentes distâncias, criando um diálogo dinâmico com os visitantes.</p>
-    </div>
-
-</section>
-
-<!-- Seção Testes -->
-<section class="contenair-ideacao">
-    <div class="row">
-        <div class="heading-section">
-            <h1 class="id">Testes</h1>
-        </div>
-
-        <!-- Slider main container -->
-        <div class="swiper swiper-navigation-disabled">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="img/thinkcard.jpg" alt="Na foto, diversos fios estão ligados a um Raspberry Pi, destacando a conexão entre os componentes." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/testes2.jpg" alt="Um rapaz está realizando testes nos sensores de toque usando um multímetro digital." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/testes1.jpg" alt="A foto mostra uma televisão exibindo um teste com a imagem do rostinho de Chico, que apresenta uma expressão triste. Ao lado, em foco, um notebook exibe a mesma imagem." style="width:100%; max-width:600px;">
-                </div>
+        <nav class="navbar-desktop">
+            <img src="logo-chico.png" alt="Logo Projeto Chico" class="logo">
+            <ul>
+                <li><a href="#about" class="nav-link">Sobre o Projeto</a></li>
+                <li><a href="#interact" class="nav-link">Interaja com o Chico</a></li>
+                <li><a href="#maker" class="nav-link">Experiência maker</a></li>
+                <li><a href="#team" class="nav-link">Equipe</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="main-button" class="config-button">
+                <img src="/img/acessibilidade.png" alt="Personagem Helena de Acessibilidade" style="width: 24px; height: 24px;">
+            </button>
+            <div id="submenu" class="submenu">
+                <button id="contrast-button">Alto Contraste</button>
+                <button onclick="adjustFontSize('increase')">A+</button>
+                <button onclick="adjustFontSize('decrease')">A-</button>
+                <button onclick="startReading()">🔊 Ativar Leitor de Tela</button>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
         </div>
+        <!-- Seção Hero com animação do Chico -->
+        <!-- Seção Hero com imagem do Chico -->
+        <section id="hero">
+            <h1>Conheça Chico,</h1>
+            <p> O caranguejo interativo!</p>
+            <div id="chico-robot" class="chico-robot">
+                <img src="ezgif.com-animated-gif-maker.gif" alt="Chico, o caranguejo robótico com corpo retangular verde e olhos expressivos, levantando uma das garras" class="chico-image">
         
-        <p>Durante a fase de testes, a equipe desenvolveu e validou as interações, garantindo que os sensores
-            respondessem adequadamente às distâncias estabelecidas. Uma tabela foi criada para relacionar teclas a
-            emoções específicas, permitindo que as respostas do caranguejo se tornassem mais significativas e
-            envolventes para os visitantes.</p>
-    </div>
-</section>
-
-<!-- Seção Visita Técnica -->
-<section class="contenair-desenvolvimento">
-    <div class="row">
-        <div class="heading-section">
-            <h1 class="id">Visita Técnica</h1>
-        </div>
-
-        <!-- Slider main container -->
-        <div class="swiper swiper-navigation-disabled">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="img/visita1.jpg" alt="Na sala, várias pessoas estão reunidas em uma formação ordenada." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/visita2.jpg" alt="Na imagem, o caranguejo Chico é apresentado de costa, uma escultura elaborada com materiais eletrônicos reciclados." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/visita.jpg" alt="Um grupo de pessoas sorrindo e posando para fotos ao redor de uma escultura de boi." style="width:100%; max-width:600px;">
-                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
+        </section>
         
-        <p>Na visita, foi demonstrado como a Artec utiliza metareciclagem para criar peças artísticas
-            e sustentáveis a partir de materiais descartados. A startup redefine o conceito de reaproveitamento,
-            mostrando que resíduos eletrônicos podem ser vistos como matéria-prima valiosa para arte e design.</p>
-    </div>
-</section>
-
-<!-- Seção Refinamento -->
-<section class="contenair-ideacao">
-    <div class="row">
-        <div class="heading-section">
-            <h1 class="id">Refinamento</h1>
-        </div>
-
-        <!-- Slider main container -->
-        <div class="swiper swiper-navigation-disabled">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img src="img/refinamento.jpg" alt="Uma mulher em pé segura um notebook, apresentando a imagem do rostinho de Chico sorrindo para um grupo de pessoas sentadas ao seu redor." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/refinamento1.jpg" alt="A foto mostra um módulo de sensor de distância, com o sensor dentro de uma estrutura impressa em 3D que possui patinhas de caranguejo." style="width:100%; max-width:600px;">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/refinamento2.jpg" alt="A foto retrata um notebook com elementos visuais pouco detalhados, mostrando uma mulher de lado, capturada de trás, sem que seu rosto seja visível." style="width:100%; max-width:600px;">
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        </div>
+        <!-- Seção Sobre o Projeto -->
+        <section id="about">
+            <h2>Sobre o Projeto</h2>
+            <img src="sobre.png" alt="Imagem sobre o projeto" style="width:100%; max-width:400px;">
+            <p>O caranguejo CHICO é um símbolo de resiliência e cultura pernambucana, renascido a partir de lixo eletrônico para
+                unir inovação e tradição. Em uma escultura de 2,4 m x 1,5 m, CHICO ganha vida através de Arduino, Raspberry Pi e
+                sensores que captam toques, temperatura e distância, transformando a interação com o público em uma experiência
+                gamificada e emocionante. Suas expressões em pixel art refletem emoções que se conectam de forma lúdica e
+                significativa com os visitantes, promovendo, por meio do motor de jogos Godot, uma reflexão sobre a importância
+                da sustentabilidade e da valorização cultural.
+            </p>
         
-        <p>Fase de finalização, onde os últimos ajustes foram feitos para otimizar a funcionalidade e
-            estética do caranguejo CHICO. Nesta etapa, a equipe revisou as interações dos sensores e
-            aprimorou a interface, garantindo que as respostas do caranguejo fossem intuitivas e envolventes.
-            Ajustes estéticos foram realizados para assegurar que o design fosse atraente e refletisse a essência
-            do projeto. Esse processo de refinamento resultou em uma experiência interativa mais coesa e impactante,
-            pronta para ser apresentada ao público.</p>
-    </div>
-</section>
-
-
-
-
-<!-- Seção Equipe -->
-<section id="team">
-    <h2>Equipe</h2>
-    <!-- Container dos Cards da Equipe -->
-    <div class="carousel-container">
-
-        <div class="carousel-track">
-            <!-- Card de Participantes -->
-
-            <div class="team-card">
-                <img src="img/carlos.enc" alt="Participante 9" class="team-photo">
-                <h3>Carlos Castilho</h3>
-                <p>Site</p>
-                <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5X2fsBXDbHMYc2nPz-H4III5Xo0eOM6CI&keywords=carlos%20castilhos&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=e61854c1-e74a-48a8-9c70-1774558cd688&spellCorrectionEnabled=true
-            " target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
+            <div>
+                <a href="https://drive.google.com/drive/folders/16-y6moEKcbA-x79Dmj3VabI4-FpsHm8b" target="_blank" aria-label="Saiba mais sobre o projeto do caranguejo CHICO">
+                    <button>Saiba Mais</button>
                 </a>
             </div>
-
-            <div class="team-card">
-                <img src="img/samantha.jpeg" alt="Participante 8" class="team-photo">
-                <h3>Samantha Pimental</h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/samantha-pimentel-54207292" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        
+        <!-- <section id="video">
+            <h2>Assista ao vídeo do Projeto Chico</h2> -->
+        
+        <!-- Incorporando o vídeo do YouTube com autoplay, loop e mudo -->
+        <!-- <div class="video-container">
+            <iframe id="chico-video"
+                src="https://www.youtube.com/embed/jdHQOXlituI?autoplay=1&loop=1&mute=1&playlist=jdHQOXlituI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div> -->
+        
+        <!-- Botão para ativar o som -->
+        <!-- <button id="unmute-btn">Ativar Som</button>
+        </section> -->
+        
+        <!-- Seção Como Interagir -->
+        <section id="interact">
+            <h2>Como Interagir com o Chico</h2>
+            <div class="interaction-steps">
+                <div class="step">
+                    <h3>Passo 1</h3>
+                    <p>Aproximar-se: Chegue perto do CHICO e observe suas reações. Ele responderá a sua presença com emoções em
+                        pixel art!</p>
+                </div>
+                <div class="step">
+                    <h3>Passo 2</h3>
+                    <p>Toque e Explore: Toque nas patas para ver como o CHICO reage. Experimente diferentes distâncias e
+                        interações para desbloquear novas emoções!</p>
+                </div>
+                <div class="step">
+                    <h3>Passo 3</h3>
+                    <p>Divirta-se!: Compartilhe sua experiência! Se o CHICO mostrar um joinha ou um coração, não esqueça de
+                        registrar o momento para as redes sociais!</p>
+                </div>
             </div>
-
-            <div class="team-card">
-                <img src="img/agata.jpg" alt="Participante 9" class="team-photo">
-                <h3>Ágata Maria</h3>
-                <p>Documentação</p>
-                <a href="https://www.linkedin.com/in/htamarf/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        <!-- Seção Maker -->
+        <section id="maker">
+            <h2>Experiência Maker</h2>
+            <div class="maker-container">
+                <img src="img/reuniao.jpg" alt="Imagem sobre o projeto">
+                <p>A jornada do caranguejo CHICO é um convite a explorar a criatividade e a inovação. Neste espaço,
+                    documentaremos cada passo do nosso processo, com registros visuais e descritivos que capturam a essência do
+                    nosso trabalho em equipe.</p>
             </div>
-
-            <div class="team-card">
-                <img src="img/gabriel.jpg" alt="Participante 9" class="team-photo">
-                <h3>Gabriel Felipe</h3>
-                <p>Hardware</p>
-                <a href="https://www.linkedin.com/in/gabriel-felipe-lins-campos-silva-03a043288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        <!-- Seção Ideação -->
+        <section class="contenair-ideacao">
+            <div class="row">
+                <div class="heading-section">
+                    <h1 class="id">Ideação</h1>
+                </div>
+        
+                <!-- Slider main container -->
+                <div class="swiper swiper-navigation-disabled">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/ideacao001.webp" alt="Imagem sobre o projeto" style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/ideacao2.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/ideacao.jpg" alt="Imagem sobre o projeto" style="width:100%; max-width:600px;">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <p>Tudo começa na fase de ideação, quando a equipe se reúne para desenvolver o conceito do caranguejo. Nesse
+                    processo, definimos os objetivos do projeto, que visam criar uma experiência interativa que valorize os
+                    símbolos da cultura local.</p>
             </div>
-
-            <div class="team-card">
-                <img src="img/maria.jpg" alt="Participante 2" class="team-photo">
-                <h3>Maria Augusta</h3>
-                <p>Gestão</p>
-                <a href="https://www.linkedin.com/in/m%C2%AA-augusta-fialho-0a7237178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        <!-- Seção Desenvolvimento -->
+        <section class="contenair-desenvolvimento">
+            <div class="row">
+                <div class="heading-section">
+                    <h1 class="id">Desenvolvimento</h1>
+                </div>
+        
+                <!-- Slider main container -->
+                <div class="swiper swiper-navigation-disabled">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/desenvolvi.jpg" alt="Dois jovens estão trabalhando juntos; um está conectando fios a um sensor enquanto o outro observa atentamente." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/desenvolvi1.jpg" alt="Vários jovens estão envolvidos em atividades; dois estão manipulando sensores, enquanto três estão concentrados em um notebook." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/desenvolvi2.jpg" alt="Uma jovem realiza uma soldagem, enquanto uma figura em pé ao seu lado permanece fora do foco, sem mostrar o rosto." style="width:100%; max-width:600px;">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+        
+                <p>Serão implementados sensores de toque, temperatura, distância, câmera e luzes, utilizando tecnologias como
+                    Arduino e Raspberry Pi para captar dados e gerar interações. Cada sensor será configurado para responder a
+                    diferentes distâncias, criando um diálogo dinâmico com os visitantes.</p>
             </div>
-
-            <div class="team-card">
-                <img src="img/Alanna Beatriz.jpg" alt="Participante 3" class="team-photo">
-                <h3>Alanna Beatriz</h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/alanna-santos-6b8633218/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        
+        </section>
+        
+        <!-- Seção Testes -->
+        <section class="contenair-ideacao">
+            <div class="row">
+                <div class="heading-section">
+                    <h1 class="id">Testes</h1>
+                </div>
+        
+                <!-- Slider main container -->
+                <div class="swiper swiper-navigation-disabled">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/thinkcard.jpg" alt="Na foto, diversos fios estão ligados a um Raspberry Pi, destacando a conexão entre os componentes." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/testes2.jpg" alt="Um rapaz está realizando testes nos sensores de toque usando um multímetro digital." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/testes1.jpg" alt="A foto mostra uma televisão exibindo um teste com a imagem do rostinho de Chico, que apresenta uma expressão triste. Ao lado, em foco, um notebook exibe a mesma imagem." style="width:100%; max-width:600px;">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+        
+                <p>Durante a fase de testes, a equipe desenvolveu e validou as interações, garantindo que os sensores
+                    respondessem adequadamente às distâncias estabelecidas. Uma tabela foi criada para relacionar teclas a
+                    emoções específicas, permitindo que as respostas do caranguejo se tornassem mais significativas e
+                    envolventes para os visitantes.</p>
             </div>
-
-            <div class="team-card">
-                <img src="img/vinicius.jpg" alt="Participante 4" class="team-photo">
-                <h3>Vinícius Oliveira</h3>
-                <p>Hardware</p>
-                <a href="https://www.linkedin.com/in/vin%C3%ADcius-oliveira-ads?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        <!-- Seção Visita Técnica -->
+        <section class="contenair-desenvolvimento">
+            <div class="row">
+                <div class="heading-section">
+                    <h1 class="id">Visita Técnica</h1>
+                </div>
+        
+                <!-- Slider main container -->
+                <div class="swiper swiper-navigation-disabled">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/visita1.jpg" alt="Na sala, várias pessoas estão reunidas em uma formação ordenada." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/visita2.jpg" alt="Na imagem, o caranguejo Chico é apresentado de costa, uma escultura elaborada com materiais eletrônicos reciclados." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/visita.jpg" alt="Um grupo de pessoas sorrindo e posando para fotos ao redor de uma escultura de boi." style="width:100%; max-width:600px;">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+        
+                <p>Na visita, foi demonstrado como a Artec utiliza metareciclagem para criar peças artísticas
+                    e sustentáveis a partir de materiais descartados. A startup redefine o conceito de reaproveitamento,
+                    mostrando que resíduos eletrônicos podem ser vistos como matéria-prima valiosa para arte e design.</p>
             </div>
-
-            <div class="team-card">
-                <img src="img/vanessa.jpg" alt="Participante 5" class="team-photo">
-                <h3>Vanessa Matias </h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/vanessamatiasdev/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        <!-- Seção Refinamento -->
+        <section class="contenair-ideacao">
+            <div class="row">
+                <div class="heading-section">
+                    <h1 class="id">Refinamento</h1>
+                </div>
+        
+                <!-- Slider main container -->
+                <div class="swiper swiper-navigation-disabled">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/refinamento.jpg" alt="Uma mulher em pé segura um notebook, apresentando a imagem do rostinho de Chico sorrindo para um grupo de pessoas sentadas ao seu redor." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/refinamento1.jpg" alt="A foto mostra um módulo de sensor de distância, com o sensor dentro de uma estrutura impressa em 3D que possui patinhas de caranguejo." style="width:100%; max-width:600px;">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/refinamento2.jpg" alt="A foto retrata um notebook com elementos visuais pouco detalhados, mostrando uma mulher de lado, capturada de trás, sem que seu rosto seja visível." style="width:100%; max-width:600px;">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+        
+                <p>Fase de finalização, onde os últimos ajustes foram feitos para otimizar a funcionalidade e
+                    estética do caranguejo CHICO. Nesta etapa, a equipe revisou as interações dos sensores e
+                    aprimorou a interface, garantindo que as respostas do caranguejo fossem intuitivas e envolventes.
+                    Ajustes estéticos foram realizados para assegurar que o design fosse atraente e refletisse a essência
+                    do projeto. Esse processo de refinamento resultou em uma experiência interativa mais coesa e impactante,
+                    pronta para ser apresentada ao público.</p>
             </div>
-
-            <div class="team-card">
-                <img src="img/arnott.jpg" alt="Participante 6" class="team-photo">
-                <h3>Arnott Ramos</h3>
-                <p>Hardware</p>
-                <a href="https://www.linkedin.com/in/arnottcaiado/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
+        </section>
+        
+        
+        
+        
+        <!-- Seção Equipe -->
+        <section id="team">
+            <h2>Equipe</h2>
+            <!-- Container dos Cards da Equipe -->
+            <div class="carousel-container">
+        
+                <div class="carousel-track">
+                    <!-- Card de Participantes -->
+        
+                    <div class="team-card">
+                        <img src="img/carlos.enc" alt="Participante 9" class="team-photo">
+                        <h3>Carlos Castilho</h3>
+                        <p>Site</p>
+                        <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAD5X2fsBXDbHMYc2nPz-H4III5Xo0eOM6CI&keywords=carlos%20castilhos&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=0&searchId=e61854c1-e74a-48a8-9c70-1774558cd688&spellCorrectionEnabled=true
+                    " target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/samantha.jpeg" alt="Participante 8" class="team-photo">
+                        <h3>Samantha Pimental</h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/samantha-pimentel-54207292" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/agata.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Ágata Maria</h3>
+                        <p>Documentação</p>
+                        <a href="https://www.linkedin.com/in/htamarf/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/gabriel.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Gabriel Felipe</h3>
+                        <p>Hardware</p>
+                        <a href="https://www.linkedin.com/in/gabriel-felipe-lins-campos-silva-03a043288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/maria.jpg" alt="Participante 2" class="team-photo">
+                        <h3>Maria Augusta</h3>
+                        <p>Gestão</p>
+                        <a href="https://www.linkedin.com/in/m%C2%AA-augusta-fialho-0a7237178?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/Alanna Beatriz.jpg" alt="Participante 3" class="team-photo">
+                        <h3>Alanna Beatriz</h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/alanna-santos-6b8633218/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/vinicius.jpg" alt="Participante 4" class="team-photo">
+                        <h3>Vinícius Oliveira</h3>
+                        <p>Hardware</p>
+                        <a href="https://www.linkedin.com/in/vin%C3%ADcius-oliveira-ads?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/vanessa.jpg" alt="Participante 5" class="team-photo">
+                        <h3>Vanessa Matias </h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/vanessamatiasdev/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/arnott.jpg" alt="Participante 6" class="team-photo">
+                        <h3>Arnott Ramos</h3>
+                        <p>Hardware</p>
+                        <a href="https://www.linkedin.com/in/arnottcaiado/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/amanda.jpg" alt="Participante 7" class="team-photo">
+                        <h3>Amanda Cruz</h3>
+                        <p>Site</p>
+                        <a href="https://www.linkedin.com/in/amanda-cruz-306707287/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+        
+                    <div class="team-card">
+                        <img src="img/arthur.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Arthur Henrique</h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/arthur-silveira-4058542a1/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/Lucas Leonides.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Lucas Leonides</h3>
+                        <p>Hardware</p>
+                        <a href="https://www.linkedin.com/in/lucas-leonides-555846299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/caio.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Caio Leão</h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/caio-le%C3%A3o-2563bb273/" target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/mateus.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Matheus willian </h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/matheus-willian-828710324
+                        " target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/dayane.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Dayanni Rodrigues </h3>
+                        <p>Documentação</p>
+                        <a href="https://www.linkedin.com/in/dayanni-rodrigues-216740226/
+                        " target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+        
+        
+                    <div class="team-card">
+                        <img src="img/ane2.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Ane Andrade</h3>
+                        <p>Site</p>
+                        <a href="https://www.linkedin.com/in/anedeandrade/ " target="_blank" class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/heloisa.enc" alt="Participante 9" class="team-photo">
+                        <h3>Maria Heloysa</h3>
+                        <p>Site</p>
+                        <a href="https://www.linkedin.com/in/maria-heloysa-da-silva-machado/" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/Gabriel minibio - Gabriel Santana.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Gabriel Santana</h3>
+                        <p>Gestão</p>
+                        <a href="https://www.linkedin.com/in/gabriel-santana-4421472b/" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/giselly.jpeg" alt="Participante 9" class="team-photo">
+                        <h3>Giselly Luiza</h3>
+                        <p>Hardware</p>
+                        <a href="https://www.linkedin.com/in/giselly-rocha-315949329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/luan ventura.jpeg" alt="Participante 9" class="team-photo">
+                        <h3>Luan Ventura</h3>
+                        <p>Hardware</p>
+                        <a href="http://linkedin.com/in/luanven" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/Robson Barreto.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Robson Barreto</h3>
+                        <p>Hardware</p>
+                        <a href="https://www.linkedin.com/in/robson-barreto-977867329/" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/Pedro Menezes.jpg" alt="Participante 9" class="team-photo">
+                        <h3>Pedro Henrique</h3>
+                        <p>Front-End</p>
+                        <a href="https://www.linkedin.com/in/pemenezes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                    <div class="team-card">
+                        <img src="img/jose severino.jpg" alt="Participante 9" class="team-photo">
+                        <h3>José Severino</h3>
+                        <p>Site</p>
+                        <a href="https://www.linkedin.com/in/netoodev/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+                            class="linkedin-btn">
+                            <img src="linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+        
+                </div>
             </div>
-
-            <div class="team-card">
-                <img src="img/amanda.jpg" alt="Participante 7" class="team-photo">
-                <h3>Amanda Cruz</h3>
-                <p>Site</p>
-                <a href="https://www.linkedin.com/in/amanda-cruz-306707287/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-
-            <div class="team-card">
-                <img src="img/arthur.jpg" alt="Participante 9" class="team-photo">
-                <h3>Arthur Henrique</h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/arthur-silveira-4058542a1/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/Lucas Leonides.jpg" alt="Participante 9" class="team-photo">
-                <h3>Lucas Leonides</h3>
-                <p>Hardware</p>
-                <a href="https://www.linkedin.com/in/lucas-leonides-555846299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/caio.jpg" alt="Participante 9" class="team-photo">
-                <h3>Caio Leão</h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/caio-le%C3%A3o-2563bb273/" target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/mateus.jpg" alt="Participante 9" class="team-photo">
-                <h3>Matheus willian </h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/matheus-willian-828710324
-                " target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/dayane.jpg" alt="Participante 9" class="team-photo">
-                <h3>Dayanni Rodrigues </h3>
-                <p>Documentação</p>
-                <a href="https://www.linkedin.com/in/dayanni-rodrigues-216740226/
-                " target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
+        </section>
+        
+        
+        
+        <!-- Seção Patrocinadores -->
+        <section id="sponsors">
+                <div class="sponsors-logos">
+                    <a href="https://faculdadesenacpe.edu.br/">
+                        <img src="img/marca Senac fecomercio Sesc vertical positivo negativo.png" alt="Senac">
+                    </a>
+        
+                    <a href="https://sebrae.com.br/sites/PortalSebrae/ufs/pe?codUf=18">
+                        <img src="img/SEBRAE MARCA BRANCA (1).png" alt="Sebrae" style="width: 130px; height: auto;">
+                    </a>
+        
+                    <a href="https://www.instagram.com/artec_pe/">
+                        <img src="img/artec logo.png" alt="Artec">
+                    </a>
+        
+                </div>
+            </section>
+        
+        <!-- Rodapé -->
+        <footer>
+            <p>© 2024 Projeto Chico - Todos os direitos reservados.</p>
+        </footer>
+    </main>
 
 
+    <script src="chicoexpansion.js"></script>
+    <script src="som.js"></script>
+    <script src="scroll.js"></script>
+    <!-- Script slides -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-            <div class="team-card">
-                <img src="img/ane2.jpg" alt="Participante 9" class="team-photo">
-                <h3>Ane Andrade</h3>
-                <p>Site</p>
-                <a href="https://www.linkedin.com/in/anedeandrade/ " target="_blank" class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
+    <script>
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 'auto',
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets',
 
-            <div class="team-card">
-                <img src="img/heloisa.enc" alt="Participante 9" class="team-photo">
-                <h3>Maria Heloysa</h3>
-                <p>Site</p>
-                <a href="https://www.linkedin.com/in/maria-heloysa-da-silva-machado/" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
+            },
+            navigation: {
+                nextEl: '.swiper-button-disabled',
+                prevEl: '.swiper-button-disabled'
+            },
+            autoplay: {
+                delay: 3000, // Tempo em milissegundos entre slides (3 segundos)
+                disableOnInteraction: false, // Continua o autoplay mesmo após interação do usuário
+            },
+        });
+    </script>
 
-            <div class="team-card">
-                <img src="img/Gabriel minibio - Gabriel Santana.jpg" alt="Participante 9" class="team-photo">
-                <h3>Gabriel Santana</h3>
-                <p>Gestão</p>
-                <a href="https://www.linkedin.com/in/gabriel-santana-4421472b/" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/giselly.jpeg" alt="Participante 9" class="team-photo">
-                <h3>Giselly Luiza</h3>
-                <p>Hardware</p>
-                <a href="https://www.linkedin.com/in/giselly-rocha-315949329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/luan ventura.jpeg" alt="Participante 9" class="team-photo">
-                <h3>Luan Ventura</h3>
-                <p>Hardware</p>
-                <a href="http://linkedin.com/in/luanven" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/Robson Barreto.jpg" alt="Participante 9" class="team-photo">
-                <h3>Robson Barreto</h3>
-                <p>Hardware</p>
-                <a href="https://www.linkedin.com/in/robson-barreto-977867329/" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/Pedro Menezes.jpg" alt="Participante 9" class="team-photo">
-                <h3>Pedro Henrique</h3>
-                <p>Front-End</p>
-                <a href="https://www.linkedin.com/in/pemenezes?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-            <div class="team-card">
-                <img src="img/jose severino.jpg" alt="Participante 9" class="team-photo">
-                <h3>José Severino</h3>
-                <p>Site</p>
-                <a href="https://www.linkedin.com/in/netoodev/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
-                    class="linkedin-btn">
-                    <img src="linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Seção Patrocinadores -->
-<section id="sponsors">
-        <div class="sponsors-logos">
-            <a href="https://faculdadesenacpe.edu.br/">
-                <img src="img/marca Senac fecomercio Sesc vertical positivo negativo.png" alt="Senac">
-            </a>
-           
-            <a href="https://sebrae.com.br/sites/PortalSebrae/ufs/pe?codUf=18">
-                 <img src="img/SEBRAE MARCA BRANCA (1).png" alt="Sebrae" style="width: 130px; height: auto;">
-            </a>
-           
-            <a href="https://www.instagram.com/artec_pe/">
-                <img src="img/artec logo.png" alt="Artec">
-            </a>
-            
-        </div>
-    </section> 
-
-<!-- Rodapé -->
-<footer>
-    <p>© 2024 Projeto Chico - Todos os direitos reservados.</p>
-</footer>
-
-
-<script src="chicoexpansion.js"></script>
-<script src="som.js"></script>
-<script src="scroll.js"></script>
-<!-- Script slides -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-    var swiper = new Swiper('.swiper', {
-        slidesPerView: 'auto',
-        grabCursor: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            type: 'bullets',
-
-        },
-        navigation: {
-            nextEl: '.swiper-button-disabled',
-            prevEl: '.swiper-button-disabled'
-        },
-        autoplay: {
-            delay: 3000, // Tempo em milissegundos entre slides (3 segundos)
-            disableOnInteraction: false, // Continua o autoplay mesmo após interação do usuário
-        },
-    });
-</script>
-
-<!-- Script para interação -->
-<script src="script.js"></script>
-<script src="menuMobile.js"></script>
+    <!-- Script para interação -->
+    <script src="script.js"></script>
+    <script src="menuMobile.js"></script>
 
 </body>
 
