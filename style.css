@@ -1,1045 +1,1033 @@
 /* Estilização swiper */
 :root {
-    /* Cor do bullet ativo */
-    --swiper-pagination-color: #217623;
-  
-    /* Posicionamento da paginação */
-    --swiper-pagination-left: auto;
-    --swiper-pagination-right: 16px;
-    --swiper-pagination-bottom: 16px;
-    --swiper-pagination-top: auto;
-  
-    /* Cor do número de fração (para paginação fracionada) */
-    --swiper-pagination-fraction-color: #000;
-  
-    /* Cor e tamanho do fundo da barra de progresso (para paginação de progresso) */
-    --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.15);
-    --swiper-pagination-progressbar-size: 6px;
-  
-    /* Tamanho e espaçamento dos bullets */
-    --swiper-pagination-bullet-size: 12px;
-    --swiper-pagination-bullet-width: 12px;
-    --swiper-pagination-bullet-height: 12px;
-  
-    /* Cor e opacidade dos bullets inativos */
-    --swiper-pagination-bullet-inactive-color: #ccc;
-    --swiper-pagination-bullet-inactive-opacity: 0.5;
-  
-    /* Opacidade do bullet ativo */
-    --swiper-pagination-bullet-opacity: 1;
-  
-    /* Espaçamento horizontal e vertical entre bullets */
-    --swiper-pagination-bullet-horizontal-gap: 8px;
-    --swiper-pagination-bullet-vertical-gap: 8px;
-  }
+  /* Cor do bullet ativo */
+  --swiper-pagination-color: #D9043E;
 
-  
-  @font-face {
-      font-family: 'Montserrat';
-      src: url("Montserrat-Medium.ttf");
-  }
+  /* Posicionamento da paginação */
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 16px;
+  --swiper-pagination-bottom: 16px;
+  --swiper-pagination-top: auto;
 
-  @font-face {
-      font-family: 'Montserrat-bold';
-      src: url("Montserrat-Bold.ttf");
-  }
+  /* Cor do número de fração (para paginação fracionada) */
+  --swiper-pagination-fraction-color: #000;
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  /* Cor e tamanho do fundo da barra de progresso (para paginação de progresso) */
+  --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.15);
+  --swiper-pagination-progressbar-size: 6px;
+
+  /* Tamanho e espaçamento dos bullets */
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+
+  /* Cor e opacidade dos bullets inativos */
+  --swiper-pagination-bullet-inactive-color: #ccc;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+
+  /* Opacidade do bullet ativo */
+  --swiper-pagination-bullet-opacity: 1;
+
+  /* Espaçamento horizontal e vertical entre bullets */
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  --swiper-pagination-bullet-vertical-gap: 8px;
 }
 
 @font-face {
-    font-family: 'Mighty Sans';
-    src: url("Mighty\ Sans.otf");
+  font-family: "Montserrat";
+  src: url("Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url("Montserrat-Bold.ttf");
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: "Mighty Sans";
+  src: url("Mighty\ Sans.otf");
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    background-color: #0f0f0f;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.6;
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  background-color: #0f0f0f;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    overflow-x: hidden;
-    /* Impede a rolagem horizontal neste contêiner */
+  overflow-x: hidden;
+  /* Impede a rolagem horizontal neste contêiner */
 }
-
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 10px;
-    background-color: #1a1a1a;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  background-color: #1a1a1a;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
 main {
-    width: 100vw;
-    position: absolute;
-    top: 100px;
+  width: 100vw;
+  position: absolute;
+  top: 100px;
 }
 
 .logo {
-    height: 100px;
+  height: 100px;
 }
 
 .navbar-desktop {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 a.nav-link {
-    font-family: 'Montserrat-bold', 'sans-serif';
-    font-weight: bold;
+  font-family: "Montserrat-bold", "sans-serif";
+  font-weight: bold;
 }
 
 .divider {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 1044px) {
-    .navbar-desktop {
-      display: none;
-    }
-    
+  .navbar-desktop {
+    display: none;
   }
+}
 
 nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .divider {
-    width: 100%;
-    height: 2px;
-    background-color: #ccc;
-    display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  display: block;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    padding: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 30px;
 }
 
 nav ul li a:hover {
-    color: #217623;
+  color: #217623;
 }
 
 /* Estilização menu hamburguer */
 
 .navbar-mobile {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 10px 24px;
-    display: none;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: none;
 }
 
 @media screen and (max-width: 1044px) {
-    .logo {
-        height: auto;
-        width: 100px;
-    }
-    
-    .navbar-mobile {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  .logo {
+    height: auto;
+    width: 100px;
+  }
 
-    .nav-list {
-        position: fixed;
-        top: 0;
-        left: 0;
-        padding-top: 50px;
-        width: 100vw;
-        height: 100vh;
-        background: #1A1A1A;
-        clip-path: circle(100px at 90% -50%);
-        transition: 1s ease-out;
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0;
-        pointer-events: none;
-        z-index: 1;
-    }
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    background: #1a1a1a;
+    clip-path: circle(100px at 90% -50%);
+    transition: 1s ease-out;
 
-    .nav.active .nav-list {
-        clip-path: circle(1500px at 90% -15%);
-        pointer-events: all;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
 
-    .nav-list a {
-        font-size: 24px;
-        opacity: 0;
-    }
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
 
-    .nav-list li:nth-child(1) a {
-        transition: 0.5s 0.2s;
-    }
+  .nav-list a {
+    font-size: 24px;
+    opacity: 0;
+  }
 
-    .nav-list li:nth-child(2) a {
-        transition: 0.5s 0.4s;
-    }
+  .nav-list li:nth-child(1) a {
+    transition: 0.5s 0.2s;
+  }
 
-    .nav-list li:nth-child(3) a {
-        transition: 0.5s 0.6s;
-    }
+  .nav-list li:nth-child(2) a {
+    transition: 0.5s 0.4s;
+  }
 
-    .nav-list li:nth-child(4) a {
-        transition: 0.5s 0.8s;
-    }
+  .nav-list li:nth-child(3) a {
+    transition: 0.5s 0.6s;
+  }
 
-    .nav.active .nav-list a {
-        opacity: 1;
-    }
+  .nav-list li:nth-child(4) a {
+    transition: 0.5s 0.8s;
+  }
 
-    .nav.active .bx {
-        position: fixed;
-        top: 26px;
-        right: 16px;
-        border-top-color: transparent;
-    }
+  .nav.active .nav-list a {
+    opacity: 1;
+  }
+
+  .nav.active .bx {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
 }
 
 .link-mobile {
-    color: #fafafa !important;
-    font-weight: 500;
+  color: #fafafa !important;
+  font-weight: 500;
 }
-  
+
 .bx {
-width: 46px;
-height: 46px;
-position: relative;
-cursor: pointer;
-z-index: 999;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
 }
 .bx::after {
-content: "";
-position: absolute;
-top: 40%;
-left: 16%;
-width: 70%;
-height: 3px;
-transition: 0.7s ease;
-background-color: #217623;
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 16%;
+  width: 70%;
+  height: 3px;
+  transition: 0.7s ease;
+  background-color: #217623;
 }
 .bx::before {
-content: "";
-position: absolute;
-top: 64%;
-left: 16%;
-width: 70%;
-height: 3px;
-transition: 0.7s ease;
-background-color: #217623;
+  content: "";
+  position: absolute;
+  top: 64%;
+  left: 16%;
+  width: 70%;
+  height: 3px;
+  transition: 0.7s ease;
+  background-color: #217623;
 }
 
 .active-bx {
-width: 46px;
-height: 46px;
-position: relative;
-cursor: pointer;
-z-index: 999;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
 }
 .active-bx::after {
-content: "";
-position: absolute;
-top: 50%;
-left: 16%;
-transform: rotate(-135deg);
-width: 70%;
-height: 3px;
-background-color: #217623;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  transform: rotate(-135deg);
+  width: 70%;
+  height: 3px;
+  background-color: #217623;
 }
 .active-bx::before {
-content: "";
-position: absolute;
-top: 50%;
-left: 16%;
-transform: rotate(315deg);
-width: 70%;
-height: 3px;
-background-color: #217623;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 16%;
+  transform: rotate(315deg);
+  width: 70%;
+  height: 3px;
+  background-color: #217623;
 }
 
 /* Hero Section */
 /* Estilização da Seção Hero */
 #hero {
-    height: 100vh;
-    /* Ocupa 100% da altura da viewport */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
-    text-align: center;
-    padding: 20px;
-    overflow-x: hidden;
-    /* Remove qualquer scroll horizontal */
+  height: 100vh;
+  /* Ocupa 100% da altura da viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  /* Remove qualquer scroll horizontal */
 }
 
 #hero h1 {
-    font-family: 'Mighty Sans';
-    font-size: 3rem;
-    color: #217623;
-    letter-spacing: 2px;
-    margin: 0;
-    /* Remove margens extras */
+  font-family: "Mighty Sans";
+  font-size: 3rem;
+  color: #217623;
+  letter-spacing: 2px;
+  margin: 0;
+  /* Remove margens extras */
 }
 
 #hero p {
-    font-family: 'Mighty Sans';
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #ccc;
-    letter-spacing: 2px;
-    max-width: 90%;
-    /* Limita o texto a 90% da largura da tela para melhor legibilidade */
+  font-family: "Mighty Sans";
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ccc;
+  letter-spacing: 2px;
+  max-width: 90%;
+  /* Limita o texto a 90% da largura da tela para melhor legibilidade */
 }
 
 /* Estilização do Contêiner de Imagem do Chico */
 .chico-robot {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 736px;
-    /* Limita a largura máxima */
-    height: auto;
-    display: flex;
-    justify-content: center;
-    /* Centraliza a imagem */
-    transition: transform 0.5s ease;
-    overflow: hidden;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 736px;
+  /* Limita a largura máxima */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  /* Centraliza a imagem */
+  transition: transform 0.5s ease;
+  overflow: hidden;
 }
 
 .chico-image {
-    max-width: 100%;
-    /* Garante que a imagem seja 100% responsiva */
-    height: auto;
-    /* Mantém a proporção correta */
-    transition: transform 0.5s ease;
+  max-width: 100%;
+  /* Garante que a imagem seja 100% responsiva */
+  height: auto;
+  /* Mantém a proporção correta */
+  transition: transform 0.5s ease;
 }
 
 #chico-robot:active .chico-image {
-    transform: scale(1.5) rotate(-10deg);
-    /* Expansão ao clicar na imagem */
+  transform: scale(1.5) rotate(-10deg);
+  /* Expansão ao clicar na imagem */
 }
-
 
 /* Seções */
 section {
-    padding: 50px;
-    text-align: center;
+  padding: 50px;
+  text-align: center;
 }
 
 section h2 {
-    font-family: 'Mighty Sans';
-    font-size: 3rem;
-    color: #217623;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+  font-family: "Mighty Sans";
+  font-size: 3rem;
+  color: #217623;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 #about {
-    max-width: 1200px;
-    /* Limita a largura máxima da seção */
-    margin: 0 auto;
-    /* Centraliza a seção */
-    padding: 30px;
-    /* Adiciona um espaço interno */
+  max-width: 1200px;
+  /* Limita a largura máxima da seção */
+  margin: 0 auto;
+  /* Centraliza a seção */
+  padding: 30px;
+  /* Adiciona um espaço interno */
 }
 
 #about p {
-    margin-bottom: 20px;
-    /* Adiciona espaço entre o parágrafo e o botão */
+  margin-bottom: 20px;
+  /* Adiciona espaço entre o parágrafo e o botão */
 }
-
-
 
 /* Interação - Passos */
 .interaction-steps {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
 }
 
 .step {
-    width: 30%;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+  width: 30%;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .step h3 {
-    color: #217623;
+  color: #217623;
 }
 
 .step:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 .maker-container {
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* Alinha o conteúdo à esquera */
-    padding: 30px;
-    gap: 20px;
-    margin: 0px auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Alinha o conteúdo à esquera */
+  padding: 30px;
+  gap: 20px;
+  margin: 0px auto;
 }
 
 .maker-container p {
-    text-align: left;
+  text-align: left;
 }
 
 .maker-container img {
-    width: auto;
-    /* garante que a imagem ocupe 100% espaço disponivel */
-    height: auto;
-    max-width: 600px;
-    /* Aumente o tamanho máximo se desejado */
-    max-height: 100%;
-    /* Mantém a altura máxima para evitar distorção */
+  width: auto;
+  /* garante que a imagem ocupe 100% espaço disponivel */
+  height: auto;
+  max-width: 600px;
+  /* Aumente o tamanho máximo se desejado */
+  max-height: 100%;
+  /* Mantém a altura máxima para evitar distorção */
 }
 
 .heading-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .id {
-    font-family: 'Mighty Sans';
-    font-size: 3rem;
-    color: #217623;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-inline: auto;
+  font-family: "Mighty Sans";
+  font-size: 3rem;
+  color: #217623;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-inline: auto;
 }
 
 .contenair-ideacao {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #1a1a1a;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1a1a1a;
 }
 
-.contenair-ideacao p, .contenair-desenvolvimento p{
-    margin-top: 20px;
-    text-align: left;
+.contenair-ideacao p,
+.contenair-desenvolvimento p {
+  margin-top: 20px;
+  text-align: left;
 }
 
 .container .row {
-    width: 855;
-    margin: auto;
+  width: 855;
+  margin: auto;
 }
 
-
 .container .row .heading-section p {
-    margin-top: 15px;
-    font-size: 17px;
-    line-height: 1.5;
+  margin-top: 15px;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide img {
+    border-radius: 10px;
 }
 
 .content-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .content-section .card {
-    flex: 1;
-    margin: 40px 20px;
+  flex: 1;
+  margin: 40px 20px;
 }
 
 .content-section .card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Track que contém todos os cards */
 .carousel-track {
-    display: flex;
-    overflow-x: auto;
-    /* Ativa o scroll horizontal */
-    scroll-snap-type: x mandatory;
-    /* Snap para cards inteiros */
-    gap: 10px;
-    /* Espaçamento entre os cards */
-    padding-bottom: 10px;
-    /* Adiciona espaçamento na parte inferior */
+  display: flex;
+  overflow-x: auto;
+  /* Ativa o scroll horizontal */
+  scroll-snap-type: x mandatory;
+  /* Snap para cards inteiros */
+  gap: 10px;
+  /* Espaçamento entre os cards */
+  padding-bottom: 10px;
+  /* Adiciona espaçamento na parte inferior */
 }
 
 /* Estilo dos cards */
 .team-card {
-    background-color: #333;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 220px;
-    /* Largura padrão dos cards */
-    flex: 0 0 220px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
-    /* Faz com que cada card se alinhe ao início ao scrollar */
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  /* Largura padrão dos cards */
+  flex: 0 0 220px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+  /* Faz com que cada card se alinhe ao início ao scrollar */
 }
 
 /* Para responsividade */
 .carousel-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-
-
 
 /* Foto do participante */
 .team-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
-
 
 /* Botão do LinkedIn */
 .linkedin-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0f0f0f;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    border: none;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  border: none;
+  padding: 0;
 }
 
 .linkedin-btn img {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 
 .linkedin-btn:hover {
-    background-color: #0c0c0c;
+  background-color: #0c0c0c;
 }
 
 /* Patrocinadores */
 #sponsors {
-    padding: 20px;
-    background-color: #1a1a1a;
+  padding: 20px;
+  background-color: #1a1a1a;
 }
 
 .sponsors-logos {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .sponsors-logos a {
-    display: flex; /* Faz a tag a ser um flex container */
-    align-items: center; /* Alinha o conteúdo dentro da tag a */
+  display: flex; /* Faz a tag a ser um flex container */
+  align-items: center; /* Alinha o conteúdo dentro da tag a */
 }
 
 .sponsors-logos img {
-    margin: 0 15px;
-    width: 100px;
+  margin: 0 15px;
+  width: 100px;
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 20px;
-    color: #ccc;
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
 }
 
 button {
-    background-color: #217623;
-    color: #0b0505;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #217623;
+  color: #0b0505;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #217623;
+  background-color: #217623;
 }
 
 #video {
-    text-align: center;
-    margin: 50px 0;
+  text-align: center;
+  margin: 50px 0;
 }
 
 #video iframe {
-    border: 5px solid #217623;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid #217623;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #video iframe:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 #unmute-btn {
-    display: block;
-    /* Garante que o botão ocupe a linha inteira */
-    margin: 10px auto;
-    /* Centraliza o botão horizontalmente */
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #217623;
-    color: #0b0505;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  display: block;
+  /* Garante que o botão ocupe a linha inteira */
+  margin: 10px auto;
+  /* Centraliza o botão horizontalmente */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #217623;
+  color: #0b0505;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #unmute-btn:hover {
-    background-color: #217623;
+  background-color: #217623;
 }
 
 /* Responsividade para dispositivos móveis */
 @media (min-width: 1024px) {
-    .team-card {
-        min-width: 33.33%;
-        /* Exibe 3 cards lado a lado em telas ainda maiores */
-    }
-
-
+  .team-card {
+    min-width: 33.33%;
+    /* Exibe 3 cards lado a lado em telas ainda maiores */
+  }
 }
 
 @media (min-width: 1200px) {
-    .team-card {
-        min-width: 25%;
-        /* Exibe 4 cards lado a lado em telas grandes */
-    }
+  .team-card {
+    min-width: 25%;
+    /* Exibe 4 cards lado a lado em telas grandes */
+  }
 }
 
 @media (max-width: 970px) {
-    .maker-container {
-        flex-direction: column;
-    }
+  .maker-container {
+    flex-direction: column;
+  }
 
-    .maker-container p {
-        max-width: 600px;
-    }
+  .maker-container p {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 
-    nav ul li {
-        margin: 10px 0;
-    }
+  nav ul li {
+    margin: 10px 0;
+  }
 
-    #hero h1 {
-        font-size: 2.5rem;
-    }
+  #hero h1 {
+    font-size: 2.5rem;
+  }
 
-    .interaction-steps {
-        flex-direction: column;
-        align-items: center;
-    }
+  .interaction-steps {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .step {
-        width: 80%;
-        margin-bottom: 20px;
-    }
+  .step {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 
-    .maker-container {
-        flex-wrap: wrap;
-        /* Permite que os itens se ajustem */
-    }
+  .maker-container {
+    flex-wrap: wrap;
+    /* Permite que os itens se ajustem */
+  }
 
-    .maker-container p {
-        margin-right: 0;
-        /* Remove a margem direita */
-        margin-bottom: 20px;
-        /* Adiciona margem abaixo do texto */
-        flex-basis: 100%;
-        /* Faz com que o texto ocupe toda a largura */
-    }
+  .maker-container p {
+    margin-right: 0;
+    /* Remove a margem direita */
+    margin-bottom: 20px;
+    /* Adiciona margem abaixo do texto */
+    flex-basis: 100%;
+    /* Faz com que o texto ocupe toda a largura */
+  }
 
-    .maker-container img {
-        max-width: 100%;
-        /* A imagem ocupa 100% da largura disponível */
-        flex-basis: 100%;
-        /* Faz com que a imagem ocupe toda a largura */
-    }
+  .maker-container img {
+    max-width: 100%;
+    /* A imagem ocupa 100% da largura disponível */
+    flex-basis: 100%;
+    /* Faz com que a imagem ocupe toda a largura */
+  }
 
-    .id {
-        font-size: 2.5rem;
-    }
+  .id {
+    font-size: 2.5rem;
+  }
 
+  .content-section {
+    flex-direction: column;
+  }
 
-    .content-section {
-        flex-direction: column;
-    }
+  .carousel-container {
+    flex-direction: column;
+  }
 
-    .carousel-container {
-        flex-direction: column;
-    }
+  .team-card {
+    width: 150px;
+  }
 
-    .team-card {
-        width: 150px;
-    }
+  .team-photo {
+    width: 70px;
+    height: 70px;
+  }
 
-    .team-photo {
-        width: 70px;
-        height: 70px;
-    }
+  /* Ajustar a imagem e o vídeo para garantir a responsividade */
+  #chico-robot,
+  #video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    /* Evita que a largura exceda o contêiner */
+  }
 
-    /* Ajustar a imagem e o vídeo para garantir a responsividade */
-    #chico-robot,
-    #video {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        /* Evita que a largura exceda o contêiner */
-    }
+  #chico-video {
+    width: 100%;
+    /* Garante que o iframe ocupe 100% da largura do contêiner */
+    height: auto;
+    /* Ajusta a altura automaticamente */
+  }
 
-    #chico-video {
-        width: 100%;
-        /* Garante que o iframe ocupe 100% da largura do contêiner */
-        height: auto;
-        /* Ajusta a altura automaticamente */
-    }
-
-    #unmute-btn {
-        width: 100%;
-        /* O botão ocupará 100% da largura disponível */
-        padding: 10px;
-        /* Ajusta o espaçamento interno */
-        font-size: 14px;
-        /* Reduz o tamanho da fonte */
-    }
-
+  #unmute-btn {
+    width: 100%;
+    /* O botão ocupará 100% da largura disponível */
+    padding: 10px;
+    /* Ajusta o espaçamento interno */
+    font-size: 14px;
+    /* Reduz o tamanho da fonte */
+  }
 }
 
 @media (max-width: 480px) {
-    #hero h1 {
-        font-size: 2rem;
-    }
+  #hero h1 {
+    font-size: 2rem;
+  }
 
-    section h2 {
-        font-size: 2rem;
-    }
+  section h2 {
+    font-size: 2rem;
+  }
 
-    .step {
-        width: 90%;
-    }
+  .step {
+    width: 90%;
+  }
 
-    /* Melhorias adicionais */
-    #hero p {
-        font-size: 1rem;
-        line-height: 1.4;
-    }
+  /* Melhorias adicionais */
+  #hero p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 
-    nav ul li {
-        margin: 5px 0;
-    }
+  nav ul li {
+    margin: 5px 0;
+  }
 
-    .step h3 {
-        font-size: 1.5rem;
-    }
+  .step h3 {
+    font-size: 1.5rem;
+  }
 
-    .linkedin-btn {
-        width: 80px;
-        height: 35px;
-    }
+  .linkedin-btn {
+    width: 80px;
+    height: 35px;
+  }
 
-    /* Ajustar a imagem e o vídeo para garantir a responsividade */
-    #chico-robot,
-    #video {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        /* Evita que a largura exceda o contêiner */
-    }
+  /* Ajustar a imagem e o vídeo para garantir a responsividade */
+  #chico-robot,
+  #video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    /* Evita que a largura exceda o contêiner */
+  }
 
-    #unmute-btn {
-        width: 100%;
-        /* O botão continua ocupando 100% da largura */
-        padding: 8px;
-        /* Reduz um pouco o espaçamento interno */
-        font-size: 14px;
-        /* Mantém o tamanho da fonte reduzido */
-    }
+  #unmute-btn {
+    width: 100%;
+    /* O botão continua ocupando 100% da largura */
+    padding: 8px;
+    /* Reduz um pouco o espaçamento interno */
+    font-size: 14px;
+    /* Mantém o tamanho da fonte reduzido */
+  }
 
-    .sponsors-logos img {
-        width: 70px; /* Reduz o tamanho das imagens */
-    }
+  .sponsors-logos img {
+    width: 70px; /* Reduz o tamanho das imagens */
+  }
 }
 
 @media (max-width: 360px) {
+  /* Ajustar o tamanho do logo no header */
+  .logo {
+    height: 40px;
+  }
 
-    /* Ajustar o tamanho do logo no header */
-    .logo {
-        height: 40px;
-    }
+  /* Diminuir o padding no header */
+  header {
+    padding: 10px;
+  }
 
-    /* Diminuir o padding no header */
-    header {
-        padding: 10px;
-    }
+  /* Reduzir o tamanho do texto no hero */
+  #hero h1 {
+    font-size: 1.8rem;
+  }
 
-    /* Reduzir o tamanho do texto no hero */
-    #hero h1 {
-        font-size: 1.8rem;
-    }
+  #hero p {
+    font-size: 0.9rem;
+  }
 
-    #hero p {
-        font-size: 0.9rem;
-    }
+  /* Ajustar a imagem e o vídeo para garantir a responsividade */
+  #chico-robot,
+  #video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    /* Evita que a largura exceda o contêiner */
+  }
 
-    /* Ajustar a imagem e o vídeo para garantir a responsividade */
-    #chico-robot,
-    #video {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        /* Evita que a largura exceda o contêiner */
-    }
+  /* Ajustar tamanho dos passos */
+  .step {
+    width: 95%;
+    padding: 15px;
+  }
 
-    /* Ajustar tamanho dos passos */
-    .step {
-        width: 95%;
-        padding: 15px;
-    }
+  .step h3 {
+    font-size: 1.2rem;
+  }
 
-    .step h3 {
-        font-size: 1.2rem;
-    }
+  /* Ajustar o tamanho das fotos no carrossel */
+  .team-photo {
+    width: 60px;
+    height: 60px;
+  }
 
-    /* Ajustar o tamanho das fotos no carrossel */
-    .team-photo {
-        width: 60px;
-        height: 60px;
-    }
+  /* Ajustar botões do carrossel */
+  .prev-btn,
+  .next-btn {
+    padding: 8px;
+  }
 
-    /* Ajustar botões do carrossel */
-    .prev-btn,
-    .next-btn {
-        padding: 8px;
-    }
+  /* Ajustar botão do LinkedIn */
+  .linkedin-btn {
+    width: 70px;
+    height: 30px;
+  }
 
-    /* Ajustar botão do LinkedIn */
-    .linkedin-btn {
-        width: 70px;
-        height: 30px;
-    }
+  /* Footer - reduzir padding */
+  footer {
+    padding: 10px;
+  }
 
-    /* Footer - reduzir padding */
-    footer {
-        padding: 10px;
-    }
+  /* Botão unmute */
+  #unmute-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
 
-    /* Botão unmute */
-    #unmute-btn {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-
-    #unmute-btn {
-        width: 100%;
-        /* O botão ocupa a largura completa */
-        padding: 8px 15px;
-        /* Ajusta o espaçamento interno */
-        font-size: 12px;
-        /* Reduz ainda mais o tamanho da fonte */
-    }
+  #unmute-btn {
+    width: 100%;
+    /* O botão ocupa a largura completa */
+    padding: 8px 15px;
+    /* Ajusta o espaçamento interno */
+    font-size: 12px;
+    /* Reduz ainda mais o tamanho da fonte */
+  }
 }
-
 
 /* Estilo de alto contraste */
 .high-contrast {
-    background-color: #e1d4d4;
-    color: #a40202;
+  background-color: #e1d4d4;
+  color: #a40202;
 }
 
 .high-contrast button {
-    background-color: #9b1d1d;
-    /* Fundo do botão em alto contraste */
-    color: #8c1717;
-    /* Cor do texto do botão em alto contraste */
-    border: 2px solid #6c0c0c;
-    /* Borda do botão em alto contraste */
+  background-color: #9b1d1d;
+  /* Fundo do botão em alto contraste */
+  color: #8c1717;
+  /* Cor do texto do botão em alto contraste */
+  border: 2px solid #6c0c0c;
+  /* Borda do botão em alto contraste */
 }
 
 /* Estilos adicionais para garantir a visibilidade em alto contraste */
 .high-contrast h1,
 .high-contrast p {
-    color: #9e0e0e;
-    /* Garante que o texto h1 e p sejam brancos */
+  color: #9e0e0e;
+  /* Garante que o texto h1 e p sejam brancos */
 }
 
 /* Estilo para os botões */
 .button-container {
-    position: fixed;
-    /* Fixa os botões na tela */
-    bottom: 20px;
-    /* Distância do fundo da tela */
-    right: 20px;
-    /* Distância da direita da tela */
-    display: flex;
-    /* Alinha os botões em linha */
-    flex-direction: column;
-    /* Coloca os botões um em cima do outro */
-    gap: 10px;
-    /* Espaçamento entre os botões */
-    z-index: 1000;
-    /* Garante que os botões fiquem acima de outros elementos */
-
+  position: fixed;
+  /* Fixa os botões na tela */
+  bottom: 20px;
+  /* Distância do fundo da tela */
+  right: 20px;
+  /* Distância da direita da tela */
+  display: flex;
+  /* Alinha os botões em linha */
+  flex-direction: column;
+  /* Coloca os botões um em cima do outro */
+  gap: 10px;
+  /* Espaçamento entre os botões */
+  z-index: 1000;
+  /* Garante que os botões fiquem acima de outros elementos */
 }
 
 /* Estilo dos botões */
 .button-container button {
-    background-color: #217623;
-    /* Cor de fundo do botão */
-    color: #ffffff;
-    /* Cor do texto do botão */
-    border: none;
-    /* Sem borda */
-    padding: 10px 15px;
-    /* Espaçamento interno */
-    border-radius: 5px;
-    /* Bordas arredondadas */
-    cursor: pointer;
-    /* Muda o cursor para indicar que é clicável */
-    font-size: 16px;
-    /* Tamanho da fonte */
+  background-color: #217623;
+  /* Cor de fundo do botão */
+  color: #ffffff;
+  /* Cor do texto do botão */
+  border: none;
+  /* Sem borda */
+  padding: 10px 15px;
+  /* Espaçamento interno */
+  border-radius: 5px;
+  /* Bordas arredondadas */
+  cursor: pointer;
+  /* Muda o cursor para indicar que é clicável */
+  font-size: 16px;
+  /* Tamanho da fonte */
 }
 
 .button-container button:hover {
-    background-color: #217623;
-    /* Cor ao passar o mouse */
+  background-color: #217623;
+  /* Cor ao passar o mouse */
 }
 
 /* Estilos para o submenu */
 .submenu {
-    display: none;
-    /* Oculta o submenu por padrão */
-    flex-direction: column;
-    /* Os botões dentro do submenu vão ficar em coluna */
+  display: none;
+  /* Oculta o submenu por padrão */
+  flex-direction: column;
+  /* Os botões dentro do submenu vão ficar em coluna */
 }
 
 .submenu.show {
-    display: flex;
-    /* Exibe o submenu quando a classe 'show' for adicionada */
+  display: flex;
+  /* Exibe o submenu quando a classe 'show' for adicionada */
 }
 
 .config-button {
-    background-color: #5a4b4a;
-    /* cor de fundo do botão */
-    color: #fff;
-    /* cor do texto */
-    border: none;
-    /* sem borda */
-    padding: 10px 20px;
-    /* espaço interno */
-    border-radius: 5px;
-    /* bordas arredondadas */
-    cursor: pointer;
-    /* muda o cursor para pointer */
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    /* transição suave */
+  background-color: #5a4b4a;
+  /* cor de fundo do botão */
+  color: #fff;
+  /* cor do texto */
+  border: none;
+  /* sem borda */
+  padding: 10px 20px;
+  /* espaço interno */
+  border-radius: 5px;
+  /* bordas arredondadas */
+  cursor: pointer;
+  /* muda o cursor para pointer */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  /* transição suave */
 }
 
 .config-button:active {
-    transform: scale(0.95);
-    /* reduz o tamanho ao clicar */
-    background-color: #b89b32;
-    /* muda a cor de fundo ao clicar */
+  transform: scale(0.95);
+  /* reduz o tamanho ao clicar */
+  background-color: #b89b32;
+  /* muda a cor de fundo ao clicar */
 }
 
 .clicked {
-    transform: rotate(360deg);
-    /* rotação ao clicar */
-    transition: transform 0.2s ease;
-    /* transição suave */
+  transform: rotate(360deg);
+  /* rotação ao clicar */
+  transition: transform 0.2s ease;
+  /* transição suave */
 }
 
 /* Efeito de clique do botão */
 button:active {
-    transform: scale(0.95);
-    /* Leve redução no tamanho ao clicar */
-    background-color: #217623;
-    /* Escurece um pouco ao clicar */
+  transform: scale(0.95);
+  /* Leve redução no tamanho ao clicar */
+  background-color: #217623;
+  /* Escurece um pouco ao clicar */
 }
 
 /* Animação de destaque ao soltar o clique */
 button.clicked {
-    animation: highlight 0.4s ease;
+  animation: highlight 0.4s ease;
 }
 
 /* Animação de destaque */
 @keyframes highlight {
-    0% {
-        transform: scale(1.05);
-        background-color: #217623;
-    }
+  0% {
+    transform: scale(1.05);
+    background-color: #217623;
+  }
 
-    50% {
-        transform: scale(1);
-        background-color: #217623;
-    }
+  50% {
+    transform: scale(1);
+    background-color: #217623;
+  }
 
-    100% {
-        transform: scale(1.05);
-        background-color: #217623;
-    }
+  100% {
+    transform: scale(1.05);
+    background-color: #217623;
+  }
 }
