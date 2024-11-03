@@ -1,7 +1,7 @@
 /* Estilização swiper */
 :root {
   /* Cor do bullet ativo */
-  --swiper-pagination-color: #D9043E;
+  --swiper-pagination-color: #FF0095;
 
   /* Posicionamento da paginação */
   --swiper-pagination-left: auto;
@@ -31,6 +31,10 @@
   /* Espaçamento horizontal e vertical entre bullets */
   --swiper-pagination-bullet-horizontal-gap: 8px;
   --swiper-pagination-bullet-vertical-gap: 8px;
+
+  --purple: #9130F3;
+  --pink: #FF0095;
+  --green: #63F15D;
 }
 
 @font-face {
@@ -136,14 +140,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--green);
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 30px;
 }
 
 nav ul li a:hover {
-  color: #217623;
+  color: var(--pink);
 }
 
 /* Estilização menu hamburguer */
@@ -227,7 +231,6 @@ nav ul li a:hover {
 }
 
 .link-mobile {
-  color: #fafafa !important;
   font-weight: 500;
 }
 
@@ -246,7 +249,7 @@ nav ul li a:hover {
   width: 70%;
   height: 3px;
   transition: 0.7s ease;
-  background-color: #217623;
+  background-color: var(--green);
 }
 .bx::before {
   content: "";
@@ -256,7 +259,7 @@ nav ul li a:hover {
   width: 70%;
   height: 3px;
   transition: 0.7s ease;
-  background-color: #217623;
+  background-color: var(--green);
 }
 
 .active-bx {
@@ -274,7 +277,7 @@ nav ul li a:hover {
   transform: rotate(-135deg);
   width: 70%;
   height: 3px;
-  background-color: #217623;
+  background-color: var(--green);
 }
 .active-bx::before {
   content: "";
@@ -284,7 +287,7 @@ nav ul li a:hover {
   transform: rotate(315deg);
   width: 70%;
   height: 3px;
-  background-color: #217623;
+  background-color: var(--green);
 }
 
 /* Hero Section */
@@ -306,7 +309,7 @@ nav ul li a:hover {
 #hero h1 {
   font-family: "Montserrat-ebold";
   font-size: 3rem;
-  color: #217623;
+  color: var(--green);
   letter-spacing: 2px;
   margin: 0;
   /* Remove margens extras */
@@ -316,7 +319,7 @@ nav ul li a:hover {
   font-family: "Montserrat-ebold";
   margin-top: 10px;
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--pink);
   letter-spacing: 2px;
   max-width: 90%;
   /* Limita o texto a 90% da largura da tela para melhor legibilidade */
@@ -349,6 +352,20 @@ nav ul li a:hover {
   /* Expansão ao clicar na imagem */
 }
 
+/* Cores dos Títulos */
+
+.titlepk {
+  color: var(--pink) !important;
+}
+
+.titlepp {
+  color: var(--purple) !important;
+}
+
+.titlegn {
+  color: var(--green) !important;
+}
+
 /* Seções */
 section {
   padding: 50px;
@@ -358,7 +375,7 @@ section {
 section h2 {
   font-family: "Montserrat-ebold";
   font-size: 3rem;
-  color: #217623;
+  color: var(--green);
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
@@ -423,7 +440,7 @@ section h2 {
 .id {
   font-family: "Montserrat-ebold";
   font-size: 3rem;
-  color: #217623;
+  color: var(--green);
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-align: center;
@@ -439,6 +456,8 @@ section h2 {
 .contenair-desenvolvimento p {
   margin-top: 20px;
   text-align: left;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 .container .row {
@@ -578,8 +597,8 @@ footer {
 }
 
 button {
-  background-color: #217623;
-  color: #0b0505;
+  background-color: var(--pink);
+  color: #FAFAFA;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -589,7 +608,7 @@ button {
 }
 
 button:hover {
-  background-color: #217623;
+  background-color: var(--purple);
 }
 
 #video {
@@ -598,7 +617,7 @@ button:hover {
 }
 
 #video iframe {
-  border: 5px solid #217623;
+  border: 5px solid var(--green);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -616,7 +635,7 @@ button:hover {
   /* Centraliza o botão horizontalmente */
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #217623;
+  background-color: var(--green);
   color: #0b0505;
   border: none;
   border-radius: 5px;
@@ -624,7 +643,7 @@ button:hover {
 }
 
 #unmute-btn:hover {
-  background-color: #217623;
+  background-color: var(--green);
 }
 
 /* Responsividade para dispositivos móveis */
@@ -656,6 +675,7 @@ button:hover {
   header {
     flex-direction: column;
     text-align: center;
+    padding: 0px;
   }
 
   nav ul {
@@ -669,6 +689,10 @@ button:hover {
 
   #hero h1 {
     font-size: 2.5rem;
+  }
+
+  #about p {
+    text-align: left;
   }
 
   .interaction-steps {
@@ -703,7 +727,7 @@ button:hover {
   }
 
   .id {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .content-section {
@@ -808,11 +832,6 @@ button:hover {
   /* Ajustar o tamanho do logo no header */
   .logo {
     height: 40px;
-  }
-
-  /* Diminuir o padding no header */
-  header {
-    padding: 10px;
   }
 
   /* Reduzir o tamanho do texto no hero */
@@ -924,7 +943,7 @@ button:hover {
 
 /* Estilo dos botões */
 .button-container button {
-  background-color: #217623;
+  background-color: var(--green);
   /* Cor de fundo do botão */
   color: #ffffff;
   /* Cor do texto do botão */
@@ -941,7 +960,7 @@ button:hover {
 }
 
 .button-container button:hover {
-  background-color: #217623;
+  background-color: var(--green);
   /* Cor ao passar o mouse */
 }
 
@@ -993,7 +1012,7 @@ button:hover {
 button:active {
   transform: scale(0.95);
   /* Leve redução no tamanho ao clicar */
-  background-color: #217623;
+  background-color: var(--green);
   /* Escurece um pouco ao clicar */
 }
 
@@ -1006,16 +1025,16 @@ button.clicked {
 @keyframes highlight {
   0% {
     transform: scale(1.05);
-    background-color: #217623;
+    background-color: var(--green);
   }
 
   50% {
     transform: scale(1);
-    background-color: #217623;
+    background-color: var(--green);
   }
 
   100% {
     transform: scale(1.05);
-    background-color: #217623;
+    background-color: var(--green);
   }
 }
