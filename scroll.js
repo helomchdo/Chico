@@ -57,8 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const carouselTrack = document.querySelector(".carousel-track");
     const teamCards = Array.from(document.querySelectorAll(".team-card"));
   
-    // Ordena os elementos pelo texto do nome (tag <h3>)
+    // Define a ordem das equipes
+    const teamOrder = ["Professores", "Site", "Hardware", "Front-End", "Gestão", "Documentação"];
+  
+    // Ordena os elementos primeiro pela equipe e depois pelo nome dentro de cada equipe
     teamCards.sort((a, b) => {
+      // Obtém o nome da equipe de cada card
+      const teamA = a.querySelector("p").innerText;
+      const teamB = b.querySelector("p").innerText;
+  
+      // Ordena pela ordem das equipes
+      const teamIndexA = teamOrder.indexOf(teamA);
+      const teamIndexB = teamOrder.indexOf(teamB);
+      if (teamIndexA !== teamIndexB) {
+        return teamIndexA - teamIndexB;
+      }
+  
+      // Se estão na mesma equipe, ordena por nome (dentro da equipe)
       const nameA = a.querySelector("h3").innerText.toLowerCase();
       const nameB = b.querySelector("h3").innerText.toLowerCase();
       return nameA.localeCompare(nameB);
@@ -66,7 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Reorganiza o conteúdo do carousel-track com os elementos ordenados
     teamCards.forEach(card => carouselTrack.appendChild(card));
-  }); 
+  });
+  
 
 
   function startReading() {
