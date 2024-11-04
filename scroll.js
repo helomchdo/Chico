@@ -53,6 +53,7 @@ button.addEventListener('click', () => {
         button.classList.remove('clicked');
     }, 200); // o tempo deve ser igual ao da transição no CSS
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const carouselTrack = document.querySelector(".carousel-track");
     const teamCards = Array.from(document.querySelectorAll(".team-card"));
