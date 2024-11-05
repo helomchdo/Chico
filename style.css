@@ -403,7 +403,7 @@ section h2 {
 
 .step {
   width: 30%;
-  background-color: #6500C9;
+  background-color: #217623;
   padding: 20px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -617,16 +617,11 @@ button:hover {
 }
 
 #video iframe {
-  border: 5px solid var(--green);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#video iframe:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
 
 #unmute-btn {
   display: block;
@@ -636,14 +631,16 @@ button:hover {
   padding: 10px 20px;
   font-size: 16px;
   background-color: var(--green);
-  color: #0b0505;
+  color: #0c0c0c;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: .3s ease;
 }
 
 #unmute-btn:hover {
-  background-color: var(--green);
+  background-color: var(--pink);
+  color: #FAFAFA;
 }
 
 /* Responsividade para dispositivos móveis */
@@ -761,15 +758,7 @@ button:hover {
     /* Garante que o iframe ocupe 100% da largura do contêiner */
     height: auto;
     /* Ajusta a altura automaticamente */
-  }
-
-  #unmute-btn {
-    width: 100%;
-    /* O botão ocupará 100% da largura disponível */
-    padding: 10px;
-    /* Ajusta o espaçamento interno */
-    font-size: 14px;
-    /* Reduz o tamanho da fonte */
+    max-width: 100%;
   }
 }
 
@@ -812,15 +801,6 @@ button:hover {
     height: auto;
     max-width: 100%;
     /* Evita que a largura exceda o contêiner */
-  }
-
-  #unmute-btn {
-    width: 100%;
-    /* O botão continua ocupando 100% da largura */
-    padding: 8px;
-    /* Reduz um pouco o espaçamento interno */
-    font-size: 14px;
-    /* Mantém o tamanho da fonte reduzido */
   }
 
   .sponsors-logos img {
@@ -885,20 +865,7 @@ button:hover {
     padding: 10px;
   }
 
-  /* Botão unmute */
-  #unmute-btn {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
 
-  #unmute-btn {
-    width: 100%;
-    /* O botão ocupa a largura completa */
-    padding: 8px 15px;
-    /* Ajusta o espaçamento interno */
-    font-size: 12px;
-    /* Reduz ainda mais o tamanho da fonte */
-  }
 }
 
 /* Estilo de alto contraste */
