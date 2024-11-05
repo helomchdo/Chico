@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const teamCards = Array.from(document.querySelectorAll(".team-card"));
   
     // Define a ordem das equipes
-    const teamOrder = ["Professores", "Site", "Hardware", "Front-End", "Gestão", "Documentação"];
+    const teamOrder = ["Professores","Gestão SENAC", "Site", "Hardware", "Front-End", "Gestão", "Documentação"];
   
     // Ordena os elementos primeiro pela equipe e depois pelo nome dentro de cada equipe
     teamCards.sort((a, b) => {
