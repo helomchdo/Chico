@@ -384,6 +384,11 @@ section h2 {
   margin-bottom: 20px;
 }
 
+.tempo-real{
+  margin-top: 40px; /* Ajuste o valor conforme necessário */
+  text-align: justify;
+}
+
 #about {
   max-width: 1200px;
   /* Limita a largura máxima da seção */
