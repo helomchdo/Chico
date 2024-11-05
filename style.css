@@ -396,7 +396,7 @@ section h2 {
 #about p {
   margin-bottom: 20px;
   /* Adiciona espaço entre o parágrafo e o botão */
-  text-align: left;
+  text-align: justify;
 }
 
 /* Interação - Passos */
@@ -433,7 +433,7 @@ section h2 {
 }
 
 .maker-container p {
-  text-align: left;
+  text-align: justify;
 }
 
 .heading-section {
@@ -460,7 +460,7 @@ section h2 {
 .contenair-ideacao p,
 .contenair-desenvolvimento p {
   margin-top: 20px;
-  text-align: left;
+  text-align: justify;
   max-width: 1000px;
   margin-inline: auto;
 }
@@ -694,7 +694,7 @@ button:hover {
   }
 
   #about p {
-    text-align: left;
+    text-align: justify;
   }
 
   .interaction-steps {
