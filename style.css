@@ -694,7 +694,7 @@ button:hover {
   }
 
   #about p {
-    text-align: left;
+    text-align: justify;
   }
 
   .interaction-steps {
