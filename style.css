@@ -366,6 +366,10 @@ nav ul li a:hover {
   color: var(--green) !important;
 }
 
+.titlepk, .titlepp, .titlegn {
+  text-transform: uppercase;
+}
+
 /* Seções */
 section {
   padding: 50px;
@@ -392,6 +396,7 @@ section h2 {
 #about p {
   margin-bottom: 20px;
   /* Adiciona espaço entre o parágrafo e o botão */
+  text-align: left;
 }
 
 /* Interação - Passos */
