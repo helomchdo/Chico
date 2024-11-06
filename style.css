@@ -387,6 +387,8 @@ section h2 {
 .tempo-real{
   margin-top: 40px; /* Ajuste o valor conforme necessário */
   text-align: justify;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 #about {
@@ -775,6 +777,10 @@ button:hover {
 @media (max-width: 480px) {
   #hero h1 {
     font-size: 2rem;
+  }
+
+  .id {
+    font-size: 1.5rem;
   }
 
   section h2 {

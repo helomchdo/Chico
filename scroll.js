@@ -5,13 +5,17 @@ document.querySelectorAll('.nav-link').forEach(link => {
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
 
-        // Usa o método nativo 'scrollIntoView' com opções para suavizar ainda mais a rolagem
-        targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        // Obtém a posição do elemento alvo e subtrai 100 pixels
+        const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - 100;
+
+        // Rola até a posição calculada com um comportamento suave
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
         });
     });
 });
+
 function adjustFontSize(action) {
     const body = document.body;
     let fontSize = window.getComputedStyle(body).fontSize;
