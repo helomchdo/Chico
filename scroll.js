@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
-
   function startReading() {
     // Seleciona todas as seções com IDs especificados no menu
     const sections = document.querySelectorAll('section');
